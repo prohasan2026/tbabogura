@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Brilliant Association, Bogura | Official Scholarship Portal</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts (Plus Jakarta Sans & Hind Siliguri for Bengali) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-english {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- ========================================== -->
+    <!-- TOP ANNOUNCEMENT TICKER                    -->
+    <!-- ========================================== -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-indigo-950 text-white text-xs py-2 px-4 border-b border-brand-800/60">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-400 text-slate-900 font-extrabold text-[10px] uppercase tracking-wider">
+                    <i class="fa-solid fa-bullhorn animate-bounce"></i> <span data-i18n="top_circular_badge">সার্কুলার ২০২৬</span>
+                </span>
+                <span class="font-medium text-slate-200" data-i18n="top_announcement_text">
+                    দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন বৃত্তি পরীক্ষা ২০২৬ | আবেদন চলছে: ০১ অক্টোবর হতে ৩১ অক্টোবর ২০২৬ পর্যন্ত
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-300">
+                <a href="#contacts" class="hover:text-amber-300 transition-colors flex items-center gap-1 text-[11px]">
+                    <i class="fa-solid fa-headset text-amber-400"></i> <span data-i18n="top_helpline">হেল্পলাইন</span>
+                </a>
+                <span class="hidden sm:inline text-slate-600">|</span>
+                <span class="text-[11px] font-mono text-amber-300 flex items-center gap-1">
+                    <i class="fa-solid fa-calendar-check"></i> <span data-i18n="top_exam_quick">পরীক্ষা: ১৯ ডিসেম্বর ২০২৬</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION BAR                             -->
+    <!-- ========================================== -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo & Name -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-lg font-bold text-slate-900 leading-tight" data-i18n="brand_name">The Brilliant Association</span>
+                        <span class="block text-xs font-semibold text-brand-600 tracking-wider uppercase" data-i18n="brand_location">Bogura, Bangladesh</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center space-x-7">
+                    <a href="#home" class="text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors" data-i18n="nav_home">Home</a>
+                    <a href="#scholarship-rates" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_rates">Scholarship Rates</a>
+                    <a href="#exam-info" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_exam_info">Exam & Marks</a>
+                    <a href="#contacts" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_contacts">Centers & Hotline</a>
+                    <a href="#notice" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_notice">Notices</a>
+                    <a href="#gallery" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_gallery">Gallery</a>
+                    <a href="#committee" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_committee">Authorities</a>
+                    <a href="status.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors" data-i18n="nav_status">পেমেন্ট যাচাই</a>
+                </div>
+
+                <!-- Desktop Action CTA & Language Switcher -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <!-- Language Toggle Switcher -->
+                    <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+                        <button type="button" id="lang-btn-bn" onclick="setLanguage('bn')"
+                            class="px-2.5 py-1 text-xs font-bold rounded-lg transition-all bg-brand-600 text-white shadow-xs">
+                            বাংলা
+                        </button>
+                        <button type="button" id="lang-btn-en" onclick="setLanguage('en')"
+                            class="px-2.5 py-1 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900">
+                            EN
+                        </button>
+                    </div>
+
+                    <a href="registration.html" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl transition-all shadow-sm shadow-brand-500/20 hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-pen mr-1.5"></i> <span data-i18n="btn_nav_apply">আবেদন করুন</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button & Language Pill -->
+                <div class="md:hidden flex items-center gap-2">
+                    <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+                        <button type="button" id="mobile-lang-bn" onclick="setLanguage('bn')" class="px-2 py-0.5 text-xs font-bold rounded bg-brand-600 text-white">বাং</button>
+                        <button type="button" id="mobile-lang-en" onclick="setLanguage('en')" class="px-2 py-0.5 text-xs font-bold rounded text-slate-600">EN</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#home" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-brand-600 bg-brand-50" data-i18n="nav_home">Home</a>
+            <a href="#scholarship-rates" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_rates">Scholarship Rates</a>
+            <a href="#exam-info" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_exam_info">Exam & Marks</a>
+            <a href="#contacts" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_contacts">Centers & Hotline</a>
+            <a href="#notice" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_notice">Notices</a>
+            <a href="#gallery" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_gallery">Gallery</a>
+            <a href="#committee" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_committee">Authorities</a>
+            <a href="status.html" class="block px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_status">পেমেন্ট যাচাই</a>
+            <div class="pt-3 border-t border-slate-100">
+                <a href="registration.html" class="block text-center px-4 py-2.5 rounded-xl bg-brand-600 text-white font-bold text-xs shadow-sm">
+                    <i class="fa-solid fa-user-plus mr-1"></i> <span data-i18n="btn_nav_apply">আবেদন করুন</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section id="home" class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-blue-50/70 via-slate-50 to-white">
+        <!-- Background Glow Accents -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-brand-500/10 via-brand-600/5 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    
+                    <!-- Tag / Pill -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100/90 text-brand-900 text-xs sm:text-sm font-bold border border-brand-200 shadow-xs">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        <span data-i18n="hero_pill">বগুড়া জেলার বৃহত্তম মেধাবৃত্তি প্ল্যাটফর্ম ২০২৬</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.25]">
+                        <span data-i18n="hero_headline_1">মেধা বিকাশ ও সুপ্ত প্রতিভা অন্বেষণে</span> <br />
+                        <span class="bg-gradient-to-r from-brand-700 via-brand-600 to-indigo-600 bg-clip-text text-transparent" data-i18n="hero_headline_2">
+                            দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া
+                        </span>
+                    </h1>
+
+                    <!-- Brief Description -->
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal" data-i18n="hero_desc">
+                        বগুড়া জেলার ৪র্থ থেকে ৯ম শ্রেণির শিক্ষার্থীদের মেধা যাচাই ও মেধাভিত্তিক বৃত্তি প্রদানের জন্য একটি নির্ভরযোগ্য এবং শতভাগ স্বচ্ছ ডিজিটাল পোর্টাল। ঘরে বসেই অনলাইন রেজিস্ট্রেশন, প্রবেশপত্র সংগ্রহ ও ফলাফল সুবিধা।
+                    </p>
+
+                    <!-- Urgent Circular Highlights Card -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-white border border-brand-200 shadow-md shadow-brand-500/5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
+                        <div class="flex items-center gap-3 p-2 rounded-xl bg-blue-50/60 border border-blue-100">
+                            <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-bold text-slate-500 uppercase" data-i18n="label_reg_timeline">আবেদনের সময়</p>
+                                <p class="text-xs font-extrabold text-slate-900" data-i18n="val_reg_timeline">০১ - ৩১ অক্টোবর ২০২৬</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-2 rounded-xl bg-amber-50/60 border border-amber-100">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500 text-white flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-bold text-slate-500 uppercase" data-i18n="label_exam_date">পরীক্ষার তারিখ</p>
+                                <p class="text-xs font-extrabold text-slate-900" data-i18n="val_exam_date">১৯ ডিসেম্বর ২০২৬ (শনিবার)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-2 rounded-xl bg-emerald-50/60 border border-emerald-100">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-bold text-slate-500 uppercase" data-i18n="label_reg_fees">পরীক্ষার ফি</p>
+                                <p class="text-xs font-extrabold text-slate-900" data-i18n="val_reg_fees">১৮০/- ও ২০০/- টাকা</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prominent Call-To-Action Buttons -->
+                    <div class="pt-2 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3">
+                        <!-- Button 1: Register Now -->
+                        <a href="registration.html" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-base font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 rounded-xl shadow-lg shadow-brand-600/30 hover:shadow-brand-600/40 hover:-translate-y-0.5 transition-all">
+                            <i class="fa-solid fa-user-plus mr-2.5 text-lg"></i> <span data-i18n="btn_register_hero">অনলাইনে আবেদন করুন</span>
+                        </a>
+
+                        <!-- Button 2: Check Result -->
+                        <a href="result.html" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-base font-bold text-slate-800 bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-brand-600 rounded-xl shadow-xs hover:text-brand-600 hover:-translate-y-0.5 transition-all">
+                            <i class="fa-solid fa-square-poll-vertical mr-2 text-lg text-brand-600"></i> <span data-i18n="btn_result_hero">ফলাফল দেখুন</span>
+                        </a>
+
+                        <!-- Button 3: Check Payment Status -->
+                        <a href="status.html" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 border border-brand-200 rounded-xl shadow-xs hover:-translate-y-0.5 transition-all">
+                            <i class="fa-solid fa-receipt mr-2 text-brand-600"></i> <span data-i18n="btn_status_hero">পেমেন্ট যাচাই</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats & Badges -->
+                    <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900" data-i18n="stat_1_val">৪র্থ - ৯ম</p>
+                            <p class="text-xs sm:text-sm text-slate-500 font-medium" data-i18n="stat_1_lbl">অংশগ্রহণকারী শ্রেণি</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-600" data-i18n="stat_2_val">৪টি বিভাগ</p>
+                            <p class="text-xs sm:text-sm text-slate-500 font-medium" data-i18n="stat_2_lbl">বৃত্তির ক্যাটাগরি</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900" data-i18n="stat_3_val">৮টি কেন্দ্র</p>
+                            <p class="text-xs sm:text-sm text-slate-500 font-medium" data-i18n="stat_3_lbl">উপজেলা সমন্বয়ক</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Live Status Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative Card Glow -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-indigo-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-100 transition duration-1000"></div>
+
+                        <!-- Card Container -->
+                        <div class="relative bg-white border border-slate-200 rounded-3xl p-6 sm:p-7 shadow-2xl space-y-5">
+                            
+                            <!-- Card Header -->
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-11 h-11 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xl shadow-inner">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-extrabold text-slate-900 text-base" data-i18n="card_status_title">বৃত্তি পরীক্ষা ২০২৬</h3>
+                                        <p class="text-xs text-brand-600 font-semibold" data-i18n="card_status_subtitle">অফিসিয়াল সার্কুলার তথ্য</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full animate-pulse flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                    <span data-i18n="badge_active">আবেদন চলছে</span>
+                                </span>
+                            </div>
+
+                            <!-- Portal Highlights List -->
+                            <div class="space-y-2.5 text-xs sm:text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100/80 transition-colors flex items-center justify-between border border-slate-200/80">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fa-solid fa-calendar-check text-brand-600 text-base"></i>
+                                        <span class="font-bold text-slate-800" data-i18n="card_list_1">নিবন্ধন সময়সীমা</span>
+                                    </div>
+                                    <span class="font-mono font-bold text-slate-900 text-xs bg-white px-2.5 py-1 rounded-lg border border-slate-200" id="hero-reg-timeline">০১ - ৩১ অক্টোবর</span>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100/80 transition-colors flex items-center justify-between border border-slate-200/80">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fa-solid fa-stopwatch text-amber-500 text-base"></i>
+                                        <span class="font-bold text-slate-800" data-i18n="card_list_2">পরীক্ষার সময় ও মান</span>
+                                    </div>
+                                    <span class="font-mono font-bold text-slate-900 text-xs bg-white px-2.5 py-1 rounded-lg border border-slate-200" id="hero-exam-duration">৩ ঘণ্টা (১০০ নম্বর)</span>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100/80 transition-colors flex items-center justify-between border border-slate-200/80">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fa-solid fa-money-bill-wave text-emerald-600 text-base"></i>
+                                        <span class="font-bold text-slate-800" data-i18n="card_list_3">রেজিস্ট্রেশন ফি</span>
+                                    </div>
+                                    <span class="font-mono font-bold text-emerald-700 text-xs bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">৳ ১৮০ / ৳ ২০০</span>
+                                </div>
+                            </div>
+
+                            <!-- Direct Action Banner inside card -->
+                            <div class="p-4 rounded-2xl bg-gradient-to-br from-brand-900 to-slate-900 text-white flex items-center justify-between gap-3 shadow-md">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 text-amber-400 text-lg">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[11px] text-slate-300 font-medium" data-i18n="card_help_q">যেকোনো তথ্যে সহায়তা?</p>
+                                        <p class="text-xs font-bold text-white" data-i18n="card_help_call">বগুড়া কেন্দ্রীয় হেল্পলাইন</p>
+                                    </div>
+                                </div>
+                                <a href="tel:01700000000" class="px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-900 font-black text-xs transition-colors flex-shrink-0">
+                                    <span data-i18n="btn_call_now">কল করুন</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 1. SCHOLARSHIP AMOUNT & CATEGORY TABLE     -->
+    <!-- ========================================== -->
+    <section id="scholarship-rates" class="py-16 sm:py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-extrabold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-trophy text-amber-500"></i> <span data-i18n="rates_tag">বার্ষিক বৃত্তির হার ও বণ্টন</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="rates_title">
+                    শ্রেণিভিত্তিক বার্ষিক বৃত্তির হার
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed" data-i18n="rates_subtitle">
+                    দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন সার্কুলার অনুযায়ী ৪র্থ থেকে ৯ম শ্রেণি পর্যন্ত নির্ধারিত ৪টি ক্যাটাগরিতে বার্ষিক বৃত্তির পরিমাণ ও সুযোগ-সুবিধা:
+                </p>
+            </div>
+
+            <!-- 4 Category Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                
+                <!-- Category 1: Talentpool -->
+                <div class="bg-gradient-to-b from-amber-50/50 to-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-400/10 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl shadow-md shadow-amber-500/30">
+                                <i class="fa-solid fa-crown"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 font-extrabold text-[11px]" data-i18n="badge_tier_top">শীর্ষ মেধা</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900" data-i18n="cat_talentpool_title">ট্যালেন্টপুল বৃত্তি</h3>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cat_talentpool_desc">সর্বোচ্চ নম্বর অর্জনকারী মেধাবী শিক্ষার্থীদের জন্য বিশেষ সম্মাননা।</p>
+                        
+                        <div class="mt-6 space-y-3 pt-4 border-t border-amber-100">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-600" data-i18n="lbl_class_4_6">৪র্থ - ৬ষ্ঠ শ্রেণি:</span>
+                                <span class="text-lg font-black text-amber-700 font-mono" data-i18n="val_tp_4_6">১,০০০/- টাকা</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-600" data-i18n="lbl_class_7_9">৭ম - ৯ম শ্রেণি:</span>
+                                <span class="text-lg font-black text-amber-700 font-mono" data-i18n="val_tp_7_9">১,২০০/- টাকা</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-3 text-[11px] font-bold text-amber-800 bg-amber-50/80 px-3 py-2 rounded-xl text-center border border-amber-200/60" data-i18n="note_tp">
+                        সনদপত্র + মেডেল + নগদ বৃত্তি
+                    </div>
+                </div>
+
+                <!-- Category 2: General -->
+                <div class="bg-gradient-to-b from-blue-50/50 to-white rounded-3xl p-6 border-2 border-brand-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-500/10 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl shadow-md shadow-brand-600/30">
+                                <i class="fa-solid fa-medal"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-900 font-extrabold text-[11px]" data-i18n="badge_tier_gen">সাধারণ মেধা</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900" data-i18n="cat_general_title">জেনারেল বৃত্তি</h3>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cat_general_desc">মেধাতালিকায় ধারাবাহিক কৃতিত্ব প্রদর্শনকারী ছাত্র-ছাত্রী।</p>
+                        
+                        <div class="mt-6 space-y-3 pt-4 border-t border-brand-100">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-600" data-i18n="lbl_class_4_6">৪র্থ - ৬ষ্ঠ শ্রেণি:</span>
+                                <span class="text-lg font-black text-brand-700 font-mono" data-i18n="val_gen_4_6">৮০০/- টাকা</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-600" data-i18n="lbl_class_7_9">৭ম - ৯ম শ্রেণি:</span>
+                                <span class="text-lg font-black text-brand-700 font-mono" data-i18n="val_gen_7_9">৯০০/- টাকা</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-3 text-[11px] font-bold text-brand-800 bg-brand-50/80 px-3 py-2 rounded-xl text-center border border-brand-200/60" data-i18n="note_gen">
+                        অফিসিয়াল প্রশংসাপত্র + নগদ বৃত্তি
+                    </div>
+                </div>
+
+                <!-- Category 3: Institution Quota -->
+                <div class="bg-gradient-to-b from-emerald-50/50 to-white rounded-3xl p-6 border-2 border-emerald-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-xl shadow-md shadow-emerald-600/30">
+                                <i class="fa-solid fa-school"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 font-extrabold text-[11px]" data-i18n="badge_tier_inst">প্রতিষ্ঠান ভিত্তিক</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900" data-i18n="cat_inst_title">প্রতিষ্ঠান কোটা বৃত্তি</h3>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cat_inst_desc">অংশগ্রহণকারী প্রতিটি বিদ্যালয়ের শীর্ষ মেধাবীদের জন্য বরাদ্দ।</p>
+                        
+                        <div class="mt-6 space-y-3 pt-4 border-t border-emerald-100">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-600" data-i18n="lbl_class_4_9">৪র্থ - ৯ম শ্রেণি:</span>
+                                <span class="text-lg font-black text-emerald-700 font-mono" data-i18n="val_inst_4_9">৬০০/- টাকা</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-400">
+                                <span data-i18n="lbl_quota_scope">সকল ক্লাসের জন্য প্রযোজ্য</span>
+                                <span class="font-bold text-emerald-600">সার্বজনীন</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-3 text-[11px] font-bold text-emerald-800 bg-emerald-50/80 px-3 py-2 rounded-xl text-center border border-emerald-200/60" data-i18n="note_inst">
+                        প্রাতিষ্ঠানিক মেধা সম্মাননা
+                    </div>
+                </div>
+
+                <!-- Category 4: Special / Goodwill -->
+                <div class="bg-gradient-to-b from-purple-50/50 to-white rounded-3xl p-6 border-2 border-purple-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-xl shadow-md shadow-purple-600/30">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-900 font-extrabold text-[11px]" data-i18n="badge_tier_goodwill">বিশেষ ক্যাটাগরি</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900" data-i18n="cat_goodwill_title">শুভেচ্ছা বৃত্তি</h3>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cat_goodwill_desc">উৎসাহ প্রদান ও মেধার স্বীকৃতিতে বিশেষ অনুপ্রেরণামূলক অনুদান।</p>
+                        
+                        <div class="mt-6 space-y-3 pt-4 border-t border-purple-100">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-600" data-i18n="lbl_class_4_9">৪র্থ - ৯ম শ্রেণি:</span>
+                                <span class="text-lg font-black text-purple-700 font-mono" data-i18n="val_goodwill_4_9">৮০০/- টাকা</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-400">
+                                <span data-i18n="lbl_quota_scope">সকল ক্লাসের জন্য প্রযোজ্য</span>
+                                <span class="font-bold text-purple-600">অনুপ্রেরণা</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-3 text-[11px] font-bold text-purple-800 bg-purple-50/80 px-3 py-2 rounded-xl text-center border border-purple-200/60" data-i18n="note_goodwill">
+                        বিশেষ শুভেচ্ছা উপহার ও সনদ
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Official Comparative Rates Table (Responsive) -->
+            <div class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden mb-8">
+                <div class="p-5 sm:p-6 bg-slate-900 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-table-list text-amber-400 text-xl"></i>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg" data-i18n="tbl_title">একনজরে বৃত্তির পূর্ণাঙ্গ তালিকা ও রেজিস্ট্রেশন ফি</h3>
+                            <p class="text-xs text-slate-400" data-i18n="tbl_sub">বগুড়া জেলা সার্কুলার ২০২৬-এর তথ্যানুযায়ী</p>
+                        </div>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 font-mono text-xs font-bold border border-brand-500/30">
+                        Class 4 to 9
+                    </span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100/80 text-slate-700 font-bold border-b border-slate-200">
+                                <th class="py-4 px-6" data-i18n="th_category">বৃত্তির ক্যাটাগরি</th>
+                                <th class="py-4 px-6 text-center" data-i18n="th_tier1">৪র্থ, ৫ম ও ৬ষ্ঠ শ্রেণি</th>
+                                <th class="py-4 px-6 text-center" data-i18n="th_tier2">৭ম, ৮ম ও ৯ম শ্রেণি</th>
+                                <th class="py-4 px-6 text-center" data-i18n="th_remarks">সুবিধা ও বিশেষ স্বীকৃতি</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium">
+                            <tr class="hover:bg-amber-50/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-slate-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                                        <span data-i18n="row_cat_1">ট্যালেন্টপুল (Talentpool)</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 font-normal" data-i18n="row_cat_1_sub">উপজেলা ও জেলা শীর্ষ মেধা</span>
+                                </td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-amber-700">১,০০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-amber-700">১,২০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-extrabold" data-i18n="badge_cert_crest">সার্টিফিকেট + মেডেল</span>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-blue-50/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-slate-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-600 text-xs"></i>
+                                        <span data-i18n="row_cat_2">জেনারেল (General)</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 font-normal" data-i18n="row_cat_2_sub">সাধারণ মেধা মূল্যায়ন</span>
+                                </td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-brand-700">৮০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-brand-700">৯০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-extrabold" data-i18n="badge_cert_gen">অফিসিয়াল সনদপত্র</span>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-emerald-50/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-slate-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i>
+                                        <span data-i18n="row_cat_3">প্রতিষ্ঠান কোটা (Institution Quota)</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 font-normal" data-i18n="row_cat_3_sub">বিদ্যালয়ভিত্তিক বিশেষ কোটা</span>
+                                </td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-emerald-700">৬০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-emerald-700">৬০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-extrabold" data-i18n="badge_cert_inst">প্রাতিষ্ঠানিক স্বীকৃতি</span>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-purple-50/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-slate-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-purple-600 text-xs"></i>
+                                        <span data-i18n="row_cat_4">শুভেচ্ছা (Goodwill / Special)</span>
+                                    </div>
+                                    <span class="text-xs text-slate-500 font-normal" data-i18n="row_cat_4_sub">বিশেষ উৎসাহ ও উদ্দীপনা পুরস্কার</span>
+                                </td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-purple-700">৮০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center font-bold font-mono text-base text-purple-700">৮০০/- টাকা</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-extrabold" data-i18n="badge_cert_gw">শুভেচ্ছা সনদপত্র</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Registration Fee Notice Footnote inside table container -->
+                <div class="p-4 sm:p-5 bg-slate-50 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-receipt"></i>
+                        </span>
+                        <div>
+                            <span class="font-bold text-slate-900 text-sm" data-i18n="notice_fees_title">নির্ধারিত রেজিস্ট্রেশন ফি:</span>
+                            <span class="text-slate-600 ml-1" data-i18n="notice_fees_detail">৪র্থ, ৫ম ও ৬ষ্ঠ শ্রেণির জন্য ১৮০/- টাকা এবং ৭ম, ৮ম ও ৯ম শ্রেণির জন্য ২০০/- টাকা।</span>
+                        </div>
+                    </div>
+                    <a href="registration.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-xs shadow-sm transition-all flex-shrink-0">
+                        <span data-i18n="btn_reg_now_sm">এখনই রেজিস্ট্রেশন করুন</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. EXAM SCHEDULE & MARKS DISTRIBUTION      -->
+    <!-- ========================================== -->
+    <section id="exam-info" class="py-16 sm:py-20 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-100 border border-brand-200 text-brand-800 text-xs font-extrabold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-calendar-check text-brand-600"></i> <span data-i18n="exam_tag">পরীক্ষার নিয়মাবলী ও কাঠামো</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="exam_title">
+                    পরীক্ষার তথ্য ও নম্বর বণ্টন
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed" data-i18n="exam_subtitle">
+                    পরীক্ষার সুনির্দিষ্ট তারিখ, সময়সীমা ও ৪টি মৌলিক বিষয়ে ১০০ নম্বরের লিখিত/এমসিকিউ বণ্টন নির্দেশিকা:
+                </p>
+            </div>
+
+            <!-- Top Schedule Big Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                
+                <!-- Exam Date Card -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-600 to-blue-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-brand-500/20">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="card_exam_date_lbl">পরীক্ষার তারিখ ও দিন</span>
+                        <h4 class="text-lg font-black text-slate-900 mt-1" data-i18n="card_exam_date_val">১৯ ডিসেম্বর ২০২৬, শনিবার</h4>
+                        <p class="text-xs text-brand-600 font-semibold mt-1" data-i18n="card_exam_time_val">সকাল ৯:০০ ঘটিকা হতে শুরু</p>
+                    </div>
+                </div>
+
+                <!-- Exam Duration Card -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-amber-500/20">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="card_exam_dur_lbl">মোট সময়সীমা</span>
+                        <h4 class="text-lg font-black text-slate-900 mt-1" data-i18n="card_exam_dur_val">৩ ঘণ্টা (১৮০ মিনিট)</h4>
+                        <p class="text-xs text-amber-600 font-semibold mt-1" data-i18n="card_exam_dur_note">যথাযথ সময়ে পরীক্ষা কেন্দ্রে প্রবেশ বাধ্যতামূলক</p>
+                    </div>
+                </div>
+
+                <!-- Total Marks Card -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-emerald-500/20">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="card_exam_marks_lbl">সর্বমোট নম্বর</span>
+                        <h4 class="text-lg font-black text-slate-900 mt-1" data-i18n="card_exam_marks_val">১০০ নম্বর (৪টি বিষয়)</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mt-1" data-i18n="card_exam_marks_note">প্রতিটি বিষয়ের মান ২৫ নম্বর</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Subject-wise Marks Distribution (4 Core Subjects) -->
+            <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md">
+                <div class="border-b border-slate-100 pb-5 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-slate-900" data-i18n="subjects_head">বিষয়ভিত্তিক ২৫ নম্বর করে মোট ১০০ নম্বরের পরীক্ষা</h3>
+                        <p class="text-xs text-slate-500 mt-0.5" data-i18n="subjects_sub">প্রতিটি বিষয়ে সমান গুরুত্ব প্রদান করে মেধাতালিকা প্রস্তুত করা হয়।</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                        <i class="fa-solid fa-list-check text-brand-600"></i> <span data-i18n="subjects_badge">৪টি আবশ্যিক বিষয়</span>
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Subject 1: Bangla -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-brand-300 transition-all space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-book-open"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-700 font-mono font-black text-sm border border-rose-200">
+                                ২৫ নম্বর
+                            </span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-base" data-i18n="subj_bangla">বাংলা (Bangla)</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed" data-i18n="subj_bangla_desc">ব্যাকরণ, সাহিত্য, বোধপরীক্ষণ ও ভাবসম্প্রসারণ বা রচনাভিত্তিক মৌলিক প্রশ্নাবলী।</p>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-rose-500 h-2 rounded-full w-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Subject 2: English -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-brand-300 transition-all space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-language"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-blue-50 text-brand-700 font-mono font-black text-sm border border-blue-200">
+                                ২৫ নম্বর
+                            </span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-base" data-i18n="subj_english">ইংরেজি (English)</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed" data-i18n="subj_english_desc">Grammar, Vocabulary, Comprehension, Translation and Structured Writing.</p>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-brand-600 h-2 rounded-full w-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Subject 3: General Math -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-brand-300 transition-all space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-calculator"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-mono font-black text-sm border border-amber-200">
+                                ২৫ নম্বর
+                            </span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-base" data-i18n="subj_math">সাধারণ গণিত (Math)</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed" data-i18n="subj_math_desc">পাটিগণিত, বীজগণিতীয় ধারণা, জ্যামিতি ও ব্যবহারিক চিন্তনদক্ষতামূলক সমস্যা।</p>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-amber-500 h-2 rounded-full w-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Subject 4: General Science & GK -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-brand-300 transition-all space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-atom"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono font-black text-sm border border-emerald-200">
+                                ২৫ নম্বর
+                            </span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-base" data-i18n="subj_science">সাধারণ বিজ্ঞান / জ্ঞান</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed" data-i18n="subj_science_desc">দৈনন্দিন বিজ্ঞান, বাংলাদেশ ও বিশ্ব পরিচিতি এবং সাম্প্রতিক সাধারণ জ্ঞান।</p>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-emerald-600 h-2 rounded-full w-full"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. HOTLINE & UPAZILA CONTACTS WIDGET       -->
+    <!-- ========================================== -->
+    <section id="contacts" class="py-16 sm:py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-extrabold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-phone-volume text-emerald-600"></i> <span data-i18n="contacts_tag">হেল্পলাইন ও কেন্দ্রভিত্তিক সমন্বয়</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="contacts_title">
+                    কেন্দ্র ভিত্তিক যোগাযোগ ও হটলাইন নম্বর
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed" data-i18n="contacts_subtitle">
+                    পরীক্ষার ফরম পূরণ, কেন্দ্র তথ্য, সিট প্ল্যান ও যেকোনো জরুরি তথ্যের জন্য আপনার নিকটস্থ কেন্দ্রের দায়িত্বপ্রাপ্ত প্রতিনিধির সাথে যোগাযোগ করুন:
+                </p>
+            </div>
+
+            <!-- Central Hotline Banner -->
+            <div class="mb-10 rounded-3xl bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white p-6 sm:p-8 shadow-xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-400 text-slate-900 flex items-center justify-center text-3xl font-black shadow-lg shadow-amber-400/20 flex-shrink-0 mx-auto md:mx-0">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest" data-i18n="central_help_tag">বগুড়া কেন্দ্রীয় সার্বক্ষণিক হেল্পলাইন</span>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white mt-0.5 font-mono" data-i18n="central_phone">+880 1330-287942</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="central_help_time">সকাল ৯.০০ টা থেকে রাত ৯.০০ টা পর্যন্ত সরাসরি কল সাপোর্ট চালু রয়েছে</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <a href="tel:01330287942" class="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold text-sm shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> <span data-i18n="btn_direct_call">সরাসরি কল করুন</span>
+                    </a>
+                    <a href="registration.html" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question"></i> <span data-i18n="btn_reg_query">আবেদন সম্পর্কিত তথ্য</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Upazila Centers Contact Cards Grid (8 Specific Centers) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <!-- 1. Adamdighi -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_adamdighi">আদমদীঘি (Adamdighi)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000001</span>
+                        <a href="tel:01711000001" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Dupchanchia -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_dupchanchia">দুপচাঁচিয়া (Dupchanchia)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000002</span>
+                        <a href="tel:01711000002" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Kahalu -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_kahalu">কাহালু (Kahalu)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000003</span>
+                        <a href="tel:01711000003" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Nandigram -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_nandigram">নন্দীগ্রাম (Nandigram)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000004</span>
+                        <a href="tel:01711000004" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Mahasthangarh -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_mahasthan">মহাস্থানগড় (Mahasthan)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000005</span>
+                        <a href="tel:01711000005" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Shibganj -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_shibganj">শিবগঞ্জ (Shibganj)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000006</span>
+                        <a href="tel:01711000006" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. Mokamtola -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_mokamtola">মোকামতলা (Mokamtola)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000007</span>
+                        <a href="tel:01711000007" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. Pirgacha -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-10 h-10 rounded-xl bg-blue-100 text-brand-700 flex items-center justify-center text-lg font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold text-[10px]" data-i18n="center_badge">পরীক্ষা কেন্দ্র</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900" data-i18n="center_pirgacha">পীরগাছা (Pirgacha)</h4>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="center_coord_label">উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+                        <span class="font-mono font-bold text-slate-800 text-xs sm:text-sm">01711-000008</span>
+                        <a href="tel:01711000008" class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-brand-600 hover:text-white hover:border-transparent text-slate-700 flex items-center justify-center text-xs transition-colors shadow-2xs" title="Call Coordinator">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. COMMITTEE AUTHORITIES                   -->
+    <!-- ========================================== -->
+    <section id="committee" class="py-16 sm:py-20 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-100 border border-brand-200 text-brand-800 text-xs font-extrabold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-users text-brand-600"></i> <span data-i18n="comm_tag">পরিচালনা পর্ষদ</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="comm_title">
+                    দায়িত্বপ্রাপ্ত ব্যক্তিবর্গ ও নির্বাহী পরিষদ
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed" data-i18n="comm_subtitle">
+                    দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া-এর সুষ্ঠু ও স্বচ্ছ বৃত্তি পরীক্ষা আয়োজনে দায়িত্বপ্রাপ্ত সম্মানিত ব্যক্তিবর্গ:
+                </p>
+            </div>
+
+            <!-- Committee Leadership Cards (3 Dignitaries) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Authority 1: Member Secretary -->
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-lg transition-all text-center space-y-4 hover:-translate-y-1">
+                    <div id="comm-photo-sec" class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-brand-600 to-indigo-600 text-white flex items-center justify-center text-3xl font-black mx-auto shadow-lg shadow-brand-500/25 overflow-hidden">
+                        <i class="fa-solid fa-user-pen"></i>
+                    </div>
+                    <div>
+                        <span class="px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-black uppercase tracking-wider border border-brand-200" data-i18n="role_member_sec">
+                            সদস্য সচিব
+                        </span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-3" data-i18n="name_kamruzzaman">কামরুজ্জামান</h3>
+                        <p class="text-xs text-slate-500 font-semibold mt-1" data-i18n="org_line">দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 text-xs text-slate-400">
+                        <span data-i18n="auth_sec_desc">প্রশাসন ও পরীক্ষা সমন্বয় পরিষদ</span>
+                    </div>
+                </div>
+
+                <!-- Authority 2: Director -->
+                <div class="bg-white rounded-3xl p-7 border-2 border-brand-500/40 shadow-md hover:shadow-xl transition-all text-center space-y-4 relative overflow-hidden hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-brand-600/10 rounded-bl-3xl pointer-events-none"></div>
+                    <div id="comm-photo-dir" class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center text-3xl font-black mx-auto shadow-lg shadow-indigo-500/25 overflow-hidden">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <span class="px-3.5 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-black uppercase tracking-wider border border-indigo-200" data-i18n="role_director">
+                            পরিচালক
+                        </span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-3" data-i18n="name_huzaifa">আবু হোজায়ফা</h3>
+                        <p class="text-xs text-slate-500 font-semibold mt-1" data-i18n="org_line">দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 text-xs text-slate-400">
+                        <span data-i18n="auth_dir_desc">সার্বিক ব্যবস্থাপনা ও পরিকল্পনা পরিষদ</span>
+                    </div>
+                </div>
+
+                <!-- Authority 3: Director General -->
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-lg transition-all text-center space-y-4 hover:-translate-y-1">
+                    <div id="comm-photo-dg" class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-amber-600 text-white flex items-center justify-center text-3xl font-black mx-auto shadow-lg shadow-amber-500/25 overflow-hidden">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <span class="px-3.5 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-black uppercase tracking-wider border border-amber-200" data-i18n="role_dg">
+                            মহা-পরিচালক
+                        </span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-3" data-i18n="name_sabbir">সাদ্দাম হোসেন সাব্বির</h3>
+                        <p class="text-xs text-slate-500 font-semibold mt-1" data-i18n="org_line">দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 text-xs text-slate-400">
+                        <span data-i18n="auth_dg_desc">প্রধান নির্বাহী ও নীতিনির্ধারণ পরিষদ</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. NOTICE & ANNOUNCEMENT SECTION           -->
+    <!-- ========================================== -->
+    <section id="notice" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-extrabold text-brand-600 tracking-widest uppercase" data-i18n="notice_tag">সর্বশেষ নোটিশ বোর্ড</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1" data-i18n="notice_title">জরুরি বিজ্ঞপ্তি ও তথ্য</h2>
+                </div>
+                <a href="#notice" class="mt-4 md:mt-0 text-sm font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
+                    <span data-i18n="btn_all_notices">সকল নোটিশ দেখুন</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div id="public-notices-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Notice Card 1 -->
+                <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                            <span class="font-bold px-3 py-1 rounded-full bg-brand-100 text-brand-800" data-i18n="nt_badge_reg">রেজিস্ট্রেশন</span>
+                            <span class="font-mono">০১ অক্টোবর ২০২৬</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-2" data-i18n="nt_1_title">বৃত্তি পরীক্ষা ২০২৬ অনলাইন ফরম পূরণ শুরু</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="nt_1_desc">৪র্থ থেকে ৯ম শ্রেণির শিক্ষার্থীদের জন্য অনলাইন আবেদন গ্রহণ চলছে। ৩১ অক্টোবর ২০২৬ পর্যন্ত আবেদন করতে পারবে।</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-slate-200">
+                        <a href="registration.html" class="text-xs font-bold text-brand-600 hover:underline flex items-center gap-1">
+                            <span data-i18n="nt_btn_apply">আবেদন করুন</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Notice Card 2 -->
+                <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                            <span class="font-bold px-3 py-1 rounded-full bg-amber-100 text-amber-800" data-i18n="nt_badge_admit">প্রবেশপত্র</span>
+                            <span class="font-mono">পরীক্ষার পূর্বে</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-2" data-i18n="nt_2_title">অনলাইনে প্রবেশপত্র (Admit Card) সংগ্রহ</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="nt_2_desc">যাচাইকৃত শিক্ষার্থীরা ওয়েবসাইটের রেজাল্ট/পোর্টাল থেকে নিজ নিজ রোল নম্বর ও ট্রানজেকশন আইডি দিয়ে প্রবেশপত্র ডাউনলোড করতে পারবে।</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-slate-200">
+                        <a href="result.html" class="text-xs font-bold text-amber-600 hover:underline flex items-center gap-1">
+                            <span data-i18n="nt_btn_portal">পোর্টাল দেখুন</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Notice Card 3 -->
+                <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                            <span class="font-bold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800" data-i18n="nt_badge_exam">পরীক্ষা তারিখ</span>
+                            <span class="font-mono">১৯ ডিসেম্বর ২০২৬</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-2" data-i18n="nt_3_title">১৯ ডিসেম্বর শনিবার সকাল ৯টায় একযোগে পরীক্ষা</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="nt_3_desc">বগুড়া জেলার ৮টি নির্ধারিত কেন্দ্রে সকাল ৯.০০ টা হতে ৩ ঘণ্টাব্যাপী ১০০ নম্বরের পূর্ণাঙ্গ পরীক্ষা অনুষ্ঠিত হবে।</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-slate-200">
+                        <a href="#exam-info" class="text-xs font-bold text-emerald-600 hover:underline flex items-center gap-1">
+                            <span data-i18n="nt_btn_schedule">সময়সূচি ও কেন্দ্র</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. PHOTO GALLERY SECTION                   -->
+    <!-- ========================================== -->
+    <section id="gallery" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-cyan-100 border border-cyan-200 text-cyan-800 text-xs font-extrabold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-camera text-cyan-600"></i> <span data-i18n="gallery_tag">ছবি ও স্মৃতিমালা</span>
+                    </span>
+                    <h2 class="text-3xl font-extrabold text-slate-900" data-i18n="gallery_title">কার্যক্রম ও ইভেন্ট ফটো গ্যালারি</h2>
+                    <p class="text-sm text-slate-600 mt-1" data-i18n="gallery_subtitle">দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন কর্তৃক আয়োজিত বৃত্তি পরীক্ষা ও পুরস্কার বিতরণী অনুষ্ঠানের বিশেষ মুহূর্ত।</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2" id="gallery-category-pills">
+                    <button type="button" onclick="filterPublicGallery('ALL')" class="gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-xs">সকল ছবি</button>
+                    <button type="button" onclick="filterPublicGallery('Prize Giving')" class="gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">পুরস্কার বিতরণী</button>
+                    <button type="button" onclick="filterPublicGallery('Exam Day')" class="gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">পরীক্ষা কেন্দ্র</button>
+                    <button type="button" onclick="filterPublicGallery('Orientation')" class="gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ওরিয়েন্টেশন</button>
+                    <button type="button" onclick="filterPublicGallery('Cultural')" class="gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">সাংস্কৃতিক</button>
+                </div>
+            </div>
+
+            <div id="public-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Dynamically populated or rendered with default photos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY PREVIEW -->
+    <div id="gallery-lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 hidden" onclick="closeGalleryLightbox()">
+        <div class="relative max-w-4xl max-h-[90vh] bg-transparent flex flex-col items-center" onclick="event.stopPropagation()">
+            <button type="button" onclick="closeGalleryLightbox()" class="absolute -top-12 right-0 text-white hover:text-amber-400 text-2xl p-2 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Enlarged photo" class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain border border-white/20">
+            <div class="mt-3 text-center text-white">
+                <h4 id="lightbox-title" class="font-extrabold text-base"></h4>
+                <p id="lightbox-desc" class="text-xs text-slate-300 mt-0.5"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FOOTER SECTION                             -->
+    <!-- ========================================== -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
+                
+                <!-- Column 1: About Association -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-2xl bg-brand-600 flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white" data-i18n="footer_brand">The Brilliant Association</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed" data-i18n="footer_about">
+                        বগুড়া জেলার ছাত্র-ছাত্রীদের মেধা মূল্যায়ন, উচ্চ শিক্ষায় উৎসাহ এবং স্বচ্ছ পরীক্ষার মাধ্যমে প্রকৃত মেধাবীদের স্বীকৃতি প্রদানে প্রতিশ্রুতিবদ্ধ একটি অগ্রগামী সামাজিক ও শিক্ষা সংগঠন।
+                    </p>
+                    <div class="flex items-center gap-3 text-slate-400 text-sm pt-1">
+                        <a id="footer-fb-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" title="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a id="footer-yt-link" href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" title="YouTube Channel"><i class="fa-brands fa-youtube"></i></a>
+                        <a id="footer-web-link" href="https://thebrilliantbogura.org" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" title="Official Website"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4" data-i18n="footer_links_title">গুরুত্বপূর্ণ লিংক</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#home" class="hover:text-white transition-colors" data-i18n="nav_home">হোম পেজ</a></li>
+                        <li><a href="#scholarship-rates" class="hover:text-white transition-colors" data-i18n="nav_rates">বৃত্তির হার ও বণ্টন</a></li>
+                        <li><a href="#exam-info" class="hover:text-white transition-colors" data-i18n="nav_exam_info">পরীক্ষার তথ্য ও নম্বর বণ্টন</a></li>
+                        <li><a href="#contacts" class="hover:text-white transition-colors" data-i18n="nav_contacts">কেন্দ্র ও হেল্পলাইন</a></li>
+                        <li><a href="registration.html" class="hover:text-white transition-colors" data-i18n="nav_reg_link">অনলাইন রেজিস্ট্রেশন</a></li>
+                        <li><a href="result.html" class="hover:text-white transition-colors" data-i18n="nav_res_link">ফলাফল ও প্রবেশপত্র</a></li>
+                        <li><a href="status.html" class="hover:text-white transition-colors" data-i18n="nav_status_link">পেমেন্ট ও আবেদন যাচাই</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4" data-i18n="footer_contact_title">যোগাযোগ ও কার্যালয়</h4>
+                    <div class="flex items-start space-x-3 text-xs sm:text-sm">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-500"></i>
+                        <span data-i18n="footer_addr">দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া জেলা কার্যালয়, বগুড়া - ৫৮০০, বাংলাদেশ</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-xs sm:text-sm">
+                        <i class="fa-solid fa-phone text-brand-500"></i>
+                        <span id="footer-phone" class="font-mono">+880 1330-287942</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-xs sm:text-sm">
+                        <i class="fa-solid fa-envelope text-brand-500"></i>
+                        <span id="footer-email">info@brilliantbogura.org</span>
+                    </div>
+                </div>
+
+                <!-- Column 4: Committee Key Signatures -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4" data-i18n="footer_lead_title">দায়িত্বপ্রাপ্ত কর্তৃপক্ষ</h4>
+                    <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
+                        <div>
+                            <span class="text-slate-500 block text-[10px]" data-i18n="role_member_sec">সদস্য সচিব:</span>
+                            <span class="font-bold text-white" data-i18n="name_kamruzzaman">কামরুজ্জামান</span>
+                        </div>
+                        <div class="pt-1.5 border-t border-slate-800">
+                            <span class="text-slate-500 block text-[10px]" data-i18n="role_director">পরিচালক:</span>
+                            <span class="font-bold text-white" data-i18n="name_huzaifa">আবু হোজায়ফা</span>
+                        </div>
+                        <div class="pt-1.5 border-t border-slate-800">
+                            <span class="text-slate-500 block text-[10px]" data-i18n="role_dg">মহা-পরিচালক:</span>
+                            <span class="font-bold text-amber-400" data-i18n="name_sabbir">সাদ্দাম হোসেন সাব্বির</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <div class="text-center sm:text-left">
+                    <p>&copy; 2026 The Brilliant Association, Bogura. All Rights Reserved.</p>
+                    <div class="developer-credit" style="font-size: 13px; color: #94a3b8; margin-top: 8px;">
+                      Designed & Developed with ❤️ by 
+                      <a href="https://www.facebook.com/profile.php?id=100064644627320&sk=directory_links" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         style="color: #38bdf8; text-decoration: none; font-weight: 600;">
+                        AH Creative Agency
+                      </a>
+                    </div>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="registration.html" class="hover:text-slate-300">Registration</a>
+                    <a href="result.html" class="hover:text-slate-300">Result Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- BILINGUAL LANGUAGE SWITCHER & APP SCRIPT   -->
+    <!-- ========================================== -->
+    <script>
+        // Language Dictionary (Bengali and English)
+        const translations = {
+            bn: {
+                top_circular_badge: "সার্কুলার ২০২৬",
+                top_announcement_text: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন বৃত্তি পরীক্ষা ২০২৬ | আবেদন চলছে: ০১ অক্টোবর হতে ৩১ অক্টোবর ২০২৬ পর্যন্ত",
+                top_helpline: "হেল্পলাইন",
+                top_exam_quick: "পরীক্ষা: ১৯ ডিসেম্বর ২০২৬",
+                brand_name: "The Brilliant Association",
+                brand_location: "Bogura, Bangladesh",
+                nav_home: "হোম",
+                nav_rates: "বৃত্তির হার",
+                nav_exam_info: "পরীক্ষার তথ্য ও নম্বর",
+                nav_contacts: "কেন্দ্র ও হেল্পলাইন",
+                nav_notice: "নোটিশ",
+                nav_committee: "কর্তৃপক্ষ",
+                nav_status: "পেমেন্ট যাচাই",
+                btn_nav_apply: "আবেদন করুন",
+                btn_status_hero: "পেমেন্ট যাচাই",
+                btn_admin: "অ্যাডমিন",
+                hero_pill: "বগুড়া জেলার বৃহত্তম মেধাবৃত্তি প্ল্যাটফর্ম ২০২৬",
+                hero_headline_1: "মেধা বিকাশ ও সুপ্ত প্রতিভা অন্বেষণে",
+                hero_headline_2: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া",
+                hero_desc: "বগুড়া জেলার ৪র্থ থেকে ৯ম শ্রেণির শিক্ষার্থীদের মেধা যাচাই ও মেধাভিত্তিক বৃত্তি প্রদানের জন্য একটি নির্ভরযোগ্য এবং শতভাগ স্বচ্ছ ডিজিটাল পোর্টাল। ঘরে বসেই অনলাইন রেজিস্ট্রেশন, প্রবেশপত্র সংগ্রহ ও ফলাফল সুবিধা।",
+                label_reg_timeline: "আবেদনের সময়",
+                val_reg_timeline: "০১ - ৩১ অক্টোবর ২০২৬",
+                label_exam_date: "পরীক্ষার তারিখ",
+                val_exam_date: "১৯ ডিসেম্বর ২০২৬ (শনিবার)",
+                label_reg_fees: "পরীক্ষার ফি",
+                val_reg_fees: "১৮০/- ও ২০০/- টাকা",
+                btn_register_hero: "অনলাইনে আবেদন করুন",
+                btn_result_hero: "ফলাফল দেখুন",
+                link_view_rates: "বৃত্তির হার দেখুন",
+                stat_1_val: "৪র্থ - ৯ম",
+                stat_1_lbl: "অংশগ্রহণকারী শ্রেণি",
+                stat_2_val: "৪টি বিভাগ",
+                stat_2_lbl: "বৃত্তির ক্যাটাগরি",
+                stat_3_val: "৮টি কেন্দ্র",
+                stat_3_lbl: "উপজেলা সমন্বয়ক",
+                card_status_title: "বৃত্তি পরীক্ষা ২০২৬",
+                card_status_subtitle: "অফিসিয়াল সার্কুলার তথ্য",
+                badge_active: "আবেদন চলছে",
+                card_list_1: "নিবন্ধন সময়সীমা",
+                card_list_2: "পরীক্ষার সময় ও মান",
+                card_list_3: "রেজিস্ট্রেশন ফি",
+                card_help_q: "যেকোনো তথ্যে সহায়তা?",
+                card_help_call: "বগুড়া কেন্দ্রীয় হেল্পলাইন",
+                btn_call_now: "কল করুন",
+                rates_tag: "বার্ষিক বৃত্তির হার ও বণ্টন",
+                rates_title: "শ্রেণিভিত্তিক বার্ষিক বৃত্তির হার",
+                rates_subtitle: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন সার্কুলার অনুযায়ী ৪র্থ থেকে ৯ম শ্রেণি পর্যন্ত নির্ধারিত ৪টি ক্যাটাগরিতে বার্ষিক বৃত্তির পরিমাণ ও সুযোগ-সুবিধা:",
+                badge_tier_top: "শীর্ষ মেধা",
+                cat_talentpool_title: "ট্যালেন্টপুল বৃত্তি",
+                cat_talentpool_desc: "সর্বোচ্চ নম্বর অর্জনকারী মেধাবী শিক্ষার্থীদের জন্য বিশেষ সম্মাননা।",
+                lbl_class_4_6: "৪র্থ - ৬ষ্ঠ শ্রেণি:",
+                val_tp_4_6: "১,০০০/- টাকা",
+                lbl_class_7_9: "৭ম - ৯ম শ্রেণি:",
+                val_tp_7_9: "১,২০০/- টাকা",
+                note_tp: "সনদপত্র + মেডেল + নগদ বৃত্তি",
+                badge_tier_gen: "সাধারণ মেধা",
+                cat_general_title: "জেনারেল বৃত্তি",
+                cat_general_desc: "মেধাতালিকায় ধারাবাহিক কৃতিত্ব প্রদর্শনকারী ছাত্র-ছাত্রী।",
+                val_gen_4_6: "৮০০/- টাকা",
+                val_gen_7_9: "৯০০/- টাকা",
+                note_gen: "অফিসিয়াল প্রশংসাপত্র + নগদ বৃত্তি",
+                badge_tier_inst: "প্রতিষ্ঠান ভিত্তিক",
+                cat_inst_title: "প্রতিষ্ঠান কোটা বৃত্তি",
+                cat_inst_desc: "অংশগ্রহণকারী প্রতিটি বিদ্যালয়ের শীর্ষ মেধাবীদের জন্য বরাদ্দ।",
+                lbl_class_4_9: "৪র্থ - ৯ম শ্রেণি:",
+                val_inst_4_9: "৬০০/- টাকা",
+                lbl_quota_scope: "সকল ক্লাসের জন্য প্রযোজ্য",
+                note_inst: "প্রাতিষ্ঠানিক মেধা সম্মাননা",
+                badge_tier_goodwill: "বিশেষ ক্যাটাগরি",
+                cat_goodwill_title: "শুভেচ্ছা বৃত্তি",
+                cat_goodwill_desc: "উৎসাহ প্রদান ও মেধার স্বীকৃতিতে বিশেষ অনুপ্রেরণামূলক অনুদান।",
+                val_goodwill_4_9: "৮০০/- টাকা",
+                note_goodwill: "বিশেষ শুভেচ্ছা উপহার ও সনদ",
+                tbl_title: "একনজরে বৃত্তির পূর্ণাঙ্গ তালিকা ও রেজিস্ট্রেশন ফি",
+                tbl_sub: "বগুড়া জেলা সার্কুলার ২০২৬-এর তথ্যানুযায়ী",
+                th_category: "বৃত্তির ক্যাটাগরি",
+                th_tier1: "৪র্থ, ৫ম ও ৬ষ্ঠ শ্রেণি",
+                th_tier2: "৭ম, ৮ম ও ৯ম শ্রেণি",
+                th_remarks: "সুবিধা ও বিশেষ স্বীকৃতি",
+                row_cat_1: "ট্যালেন্টপুল (Talentpool)",
+                row_cat_1_sub: "উপজেলা ও জেলা শীর্ষ মেধা",
+                row_cat_2: "জেনারেল (General)",
+                row_cat_2_sub: "সাধারণ মেধা মূল্যায়ন",
+                row_cat_3: "প্রতিষ্ঠান কোটা (Institution Quota)",
+                row_cat_3_sub: "বিদ্যালয়ভিত্তিক বিশেষ কোটা",
+                row_cat_4: "শুভেচ্ছা (Goodwill / Special)",
+                row_cat_4_sub: "বিশেষ উৎসাহ ও উদ্দীপনা পুরস্কার",
+                badge_cert_crest: "সার্টিফিকেট + মেডেল",
+                badge_cert_gen: "অফিসিয়াল সনদপত্র",
+                badge_cert_inst: "প্রাতিষ্ঠানিক স্বীকৃতি",
+                badge_cert_gw: "শুভেচ্ছা সনদপত্র",
+                notice_fees_title: "নির্ধারিত রেজিস্ট্রেশন ফি:",
+                notice_fees_detail: "৪র্থ, ৫ম ও ৬ষ্ঠ শ্রেণির জন্য ১৮০/- টাকা এবং ৭ম, ৮ম ও ৯ম শ্রেণির জন্য ২০০/- টাকা।",
+                btn_reg_now_sm: "এখনই রেজিস্ট্রেশন করুন",
+                exam_tag: "পরীক্ষার নিয়মাবলী ও কাঠামো",
+                exam_title: "পরীক্ষার তথ্য ও নম্বর বণ্টন",
+                exam_subtitle: "পরীক্ষার সুনির্দিষ্ট তারিখ, সময়সীমা ও ৪টি মৌলিক বিষয়ে ১০০ নম্বরের লিখিত/এমসিকিউ বণ্টন নির্দেশিকা:",
+                card_exam_date_lbl: "পরীক্ষার তারিখ ও দিন",
+                card_exam_date_val: "১৯ ডিসেম্বর ২০২৬, শনিবার",
+                card_exam_time_val: "সকাল ৯:০০ ঘটিকা হতে শুরু",
+                card_exam_dur_lbl: "মোট সময়সীমা",
+                card_exam_dur_val: "৩ ঘণ্টা (১৮০ মিনিট)",
+                card_exam_dur_note: "যথাযথ সময়ে পরীক্ষা কেন্দ্রে প্রবেশ বাধ্যতামূলক",
+                card_exam_marks_lbl: "সর্বমোট নম্বর",
+                card_exam_marks_val: "১০০ নম্বর (৪টি বিষয়)",
+                card_exam_marks_note: "প্রতিটি বিষয়ের মান ২৫ নম্বর",
+                subjects_head: "বিষয়ভিত্তিক ২৫ নম্বর করে মোট ১০০ নম্বরের পরীক্ষা",
+                subjects_sub: "প্রতিটি বিষয়ে সমান গুরুত্ব প্রদান করে মেধাতালিকা প্রস্তুত করা হয়।",
+                subjects_badge: "৪টি আবশ্যিক বিষয়",
+                subj_bangla: "বাংলা (Bangla)",
+                subj_bangla_desc: "ব্যাকরণ, সাহিত্য, বোধপরীক্ষণ ও ভাবসম্প্রসারণ বা রচনাভিত্তিক মৌলিক প্রশ্নাবলী।",
+                subj_english: "ইংরেজি (English)",
+                subj_english_desc: "Grammar, Vocabulary, Comprehension, Translation and Structured Writing.",
+                subj_math: "সাধারণ গণিত (Math)",
+                subj_math_desc: "পাটিগণিত, বীজগণিতীয় ধারণা, জ্যামিতি ও ব্যবহারিক চিন্তনদক্ষতামূলক সমস্যা।",
+                subj_science: "সাধারণ বিজ্ঞান / জ্ঞান",
+                subj_science_desc: "দৈনন্দিন বিজ্ঞান, বাংলাদেশ ও বিশ্ব পরিচিতি এবং সাম্প্রতিক সাধারণ জ্ঞান।",
+                contacts_tag: "হেল্পলাইন ও কেন্দ্রভিত্তিক সমন্বয়",
+                contacts_title: "কেন্দ্র ভিত্তিক যোগাযোগ ও হটলাইন নম্বর",
+                contacts_subtitle: "পরীক্ষার ফরম পূরণ, কেন্দ্র তথ্য, সিট প্ল্যান ও যেকোনো জরুরি তথ্যের জন্য আপনার নিকটস্থ কেন্দ্রের দায়িত্বপ্রাপ্ত প্রতিনিধির সাথে যোগাযোগ করুন:",
+                central_help_tag: "বগুড়া কেন্দ্রীয় সার্বক্ষণিক হেল্পলাইন",
+                central_phone: "+880 1700-000000",
+                central_help_time: "সকাল ৯.০০ টা থেকে রাত ৯.০০ টা পর্যন্ত সরাসরি কল সাপোর্ট চালু রয়েছে",
+                btn_direct_call: "সরাসরি কল করুন",
+                btn_reg_query: "আবেদন সম্পর্কিত তথ্য",
+                center_badge: "পরীক্ষা কেন্দ্র",
+                center_adamdighi: "আদমদীঘি (Adamdighi)",
+                center_dupchanchia: "দুপচাঁচিয়া (Dupchanchia)",
+                center_kahalu: "কাহালু (Kahalu)",
+                center_nandigram: "নন্দীগ্রাম (Nandigram)",
+                center_mahasthan: "মহাস্থানগড় (Mahasthan)",
+                center_shibganj: "শিবগঞ্জ (Shibganj)",
+                center_mokamtola: "মোকামতলা (Mokamtola)",
+                center_pirgacha: "পীরগাছা (Pirgacha)",
+                center_coord_label: "উপজেলা দায়িত্বপ্রাপ্ত সমন্বয়ক",
+                comm_tag: "পরিচালনা পর্ষদ",
+                comm_title: "দায়িত্বপ্রাপ্ত ব্যক্তিবর্গ ও নির্বাহী পরিষদ",
+                comm_subtitle: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া-এর সুষ্ঠু ও স্বচ্ছ বৃত্তি পরীক্ষা আয়োজনে দায়িত্বপ্রাপ্ত সম্মানিত ব্যক্তিবর্গ:",
+                role_member_sec: "সদস্য সচিব",
+                name_kamruzzaman: "কামরুজ্জামান",
+                role_director: "পরিচালক",
+                name_huzaifa: "আবু হোজায়ফা",
+                role_dg: "মহা-পরিচালক",
+                name_sabbir: "সাদ্দাম হোসেন সাব্বির",
+                org_line: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া",
+                auth_sec_desc: "প্রশাসন ও পরীক্ষা সমন্বয় পরিষদ",
+                auth_dir_desc: "সার্বিক ব্যবস্থাপনা ও পরিকল্পনা পরিষদ",
+                auth_dg_desc: "প্রধান নির্বাহী ও নীতিনির্ধারণ পরিষদ",
+                notice_tag: "সর্বশেষ নোটিশ বোর্ড",
+                notice_title: "জরুরি বিজ্ঞপ্তি ও তথ্য",
+                btn_all_notices: "সকল নোটিশ দেখুন",
+                nav_gallery: "গ্যালারি",
+                gallery_tag: "ছবি ও স্মৃতিমালা",
+                gallery_title: "কার্যক্রম ও ইভেন্ট ফটো গ্যালারি",
+                gallery_subtitle: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন কর্তৃক আয়োজিত বৃত্তি পরীক্ষা ও পুরস্কার বিতরণী অনুষ্ঠানের বিশেষ মুহূর্ত।",
+                nt_badge_reg: "রেজিস্ট্রেশন",
+                nt_1_title: "বৃত্তি পরীক্ষা ২০২৬ অনলাইন ফরম পূরণ শুরু",
+                nt_1_desc: "৪র্থ থেকে ৯ম শ্রেণির শিক্ষার্থীদের জন্য অনলাইন আবেদন গ্রহণ চলছে। ৩১ অক্টোবর ২০২৬ পর্যন্ত আবেদন করতে পারবে।",
+                nt_btn_apply: "আবেদন করুন",
+                nt_badge_admit: "প্রবেশপত্র",
+                nt_2_title: "অনলাইনে প্রবেশপত্র (Admit Card) সংগ্রহ",
+                nt_2_desc: "যাচাইকৃত শিক্ষার্থীরা ওয়েবসাইটের রেজাল্ট/পোর্টাল থেকে নিজ নিজ রোল নম্বর ও ট্রানজেকশন আইডি দিয়ে প্রবেশপত্র ডাউনলোড করতে পারবে।",
+                nt_btn_portal: "পোর্টাল দেখুন",
+                nt_badge_exam: "পরীক্ষা তারিখ",
+                nt_3_title: "১৯ ডিসেম্বর শনিবার সকাল ৯টায় একযোগে পরীক্ষা",
+                nt_3_desc: "বগুড়া জেলার ৮টি নির্ধারিত কেন্দ্রে সকাল ৯.০০ টা হতে ৩ ঘণ্টাব্যাপী ১০০ নম্বরের পূর্ণাঙ্গ পরীক্ষা অনুষ্ঠিত হবে।",
+                nt_btn_schedule: "সময়সূচি ও কেন্দ্র",
+                footer_brand: "The Brilliant Association",
+                footer_about: "বগুড়া জেলার ছাত্র-ছাত্রীদের মেধা মূল্যায়ন, উচ্চ শিক্ষায় উৎসাহ এবং স্বচ্ছ পরীক্ষার মাধ্যমে প্রকৃত মেধাবীদের স্বীকৃতি প্রদানে প্রতিশ্রুতিবদ্ধ একটি অগ্রগামী সামাজিক ও শিক্ষা সংগঠন।",
+                footer_links_title: "গুরুত্বপূর্ণ লিংক",
+                nav_reg_link: "অনলাইন রেজিস্ট্রেশন",
+                nav_res_link: "ফলাফল ও প্রবেশপত্র",
+                footer_contact_title: "যোগাযোগ ও কার্যালয়",
+                footer_addr: "দি ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া জেলা কার্যালয়, বগুড়া - ৫৮০০, বাংলাদেশ",
+                footer_lead_title: "দায়িত্বপ্রাপ্ত কর্তৃপক্ষ"
+            },
+            en: {
+                top_circular_badge: "Circular 2026",
+                top_announcement_text: "The Brilliant Association Scholarship 2026 | Applications Open: 01 October to 31 October 2026",
+                top_helpline: "Helpline",
+                top_exam_quick: "Exam: 19 December 2026",
+                brand_name: "The Brilliant Association",
+                brand_location: "Bogura, Bangladesh",
+                nav_home: "Home",
+                nav_rates: "Scholarship Rates",
+                nav_exam_info: "Exam & Marks",
+                nav_contacts: "Centers & Hotline",
+                nav_notice: "Notices",
+                nav_gallery: "Gallery",
+                gallery_tag: "Photos & Memories",
+                gallery_title: "Activities & Events Photo Gallery",
+                gallery_subtitle: "Special moments from our scholarship examination award ceremonies and events.",
+                nav_committee: "Authorities",
+                nav_status: "Payment Status",
+                btn_nav_apply: "Register Now",
+                btn_status_hero: "Check Status",
+                btn_admin: "Admin",
+                hero_pill: "Bogura's Premier Merit Scholarship Portal 2026",
+                hero_headline_1: "Nurturing Merit & Unlocking Brilliance",
+                hero_headline_2: "The Brilliant Association, Bogura",
+                hero_desc: "A trusted and fully transparent digital scholarship platform for students of Classes 4 to 9 across Bogura district. Seamless online registration, instant admit cards, and published results.",
+                label_reg_timeline: "Registration Period",
+                val_reg_timeline: "01 - 31 October 2026",
+                label_exam_date: "Exam Date",
+                val_exam_date: "19 December 2026 (Saturday)",
+                label_reg_fees: "Application Fee",
+                val_reg_fees: "180/- & 200/- BDT",
+                btn_register_hero: "Apply Online Now",
+                btn_result_hero: "Check Result",
+                link_view_rates: "View Scholarship Rates",
+                stat_1_val: "Class 4 - 9",
+                stat_1_lbl: "Participating Classes",
+                stat_2_val: "4 Tiers",
+                stat_2_lbl: "Scholarship Categories",
+                stat_3_val: "8 Centers",
+                stat_3_lbl: "Upazila Coordinators",
+                card_status_title: "Scholarship Exam 2026",
+                card_status_subtitle: "Official Circular Details",
+                badge_active: "Enrolling Now",
+                card_list_1: "Registration Deadline",
+                card_list_2: "Exam Duration & Marks",
+                card_list_3: "Registration Fees",
+                card_help_q: "Need Assistance?",
+                card_help_call: "Bogura Central Helpline",
+                btn_call_now: "Call Helpline",
+                rates_tag: "Annual Scholarship Allocation",
+                rates_title: "Scholarship Amounts & Categories",
+                rates_subtitle: "Official annual scholarship allocation across 4 categories for Classes 4 to 9 as per association circular:",
+                badge_tier_top: "Top Merit",
+                cat_talentpool_title: "Talentpool Scholarship",
+                cat_talentpool_desc: "Distinguished award for top-scoring students demonstrating premier academic brilliance.",
+                lbl_class_4_6: "Class 4 - 6:",
+                val_tp_4_6: "1,000/- BDT",
+                lbl_class_7_9: "Class 7 - 9:",
+                val_tp_7_9: "1,200/- BDT",
+                note_tp: "Certificate + Medal + Cash Award",
+                badge_tier_gen: "General Merit",
+                cat_general_title: "General Scholarship",
+                cat_general_desc: "Recognizing high achievers with consistent merit across all participating institutions.",
+                val_gen_4_6: "800/- BDT",
+                val_gen_7_9: "900/- BDT",
+                note_gen: "Official Certificate + Cash Award",
+                badge_tier_inst: "Institution Quota",
+                cat_inst_title: "Institution Quota",
+                cat_inst_desc: "Dedicated institutional merit quota allocated for top students from every school.",
+                lbl_class_4_9: "Class 4 - 9:",
+                val_inst_4_9: "600/- BDT",
+                lbl_quota_scope: "Applicable to All Classes",
+                note_inst: "School Merit Recognition",
+                badge_tier_goodwill: "Special Category",
+                cat_goodwill_title: "Goodwill Award",
+                cat_goodwill_desc: "Special recognition and encouragement grant for promising young talents.",
+                val_goodwill_4_9: "800/- BDT",
+                note_goodwill: "Special Gift & Recognition Certificate",
+                tbl_title: "Comprehensive Scholarship Matrix & Registration Fees",
+                tbl_sub: "Extracted from Bogura District Official Circular 2026",
+                th_category: "Scholarship Category",
+                th_tier1: "Class 4, 5 & 6",
+                th_tier2: "Class 7, 8 & 9",
+                th_remarks: "Benefits & Awards",
+                row_cat_1: "Talentpool (ট্যালেন্টপুল)",
+                row_cat_1_sub: "District & Upazila Top Merit",
+                row_cat_2: "General (জেনারেল)",
+                row_cat_2_sub: "Standard Merit Evaluation",
+                row_cat_3: "Institution Quota (প্রতিষ্ঠান কোটা)",
+                row_cat_3_sub: "Dedicated School Quota",
+                row_cat_4: "Goodwill / Special (শুভেচ্ছা)",
+                row_cat_4_sub: "Encouragement & Special Award",
+                badge_cert_crest: "Certificate + Medal",
+                badge_cert_gen: "Official Certificate",
+                badge_cert_inst: "Institutional Award",
+                badge_cert_gw: "Goodwill Certificate",
+                notice_fees_title: "Application Fees:",
+                notice_fees_detail: "Class 4, 5 & 6 = 180/- BDT; Class 7, 8 & 9 = 200/- BDT.",
+                btn_reg_now_sm: "Register Now",
+                exam_tag: "Exam Rules & Structure",
+                exam_title: "Examination Info & Marks Distribution",
+                exam_subtitle: "Official exam schedule, 3-hour duration, and 100-mark distribution across 4 core subjects:",
+                card_exam_date_lbl: "Exam Date & Day",
+                card_exam_date_val: "19 December 2026, Saturday",
+                card_exam_time_val: "Starting at 9:00 AM Promptly",
+                card_exam_dur_lbl: "Total Duration",
+                card_exam_dur_val: "3 Hours (180 Minutes)",
+                card_exam_dur_note: "Timely arrival at exam hall is mandatory",
+                card_exam_marks_lbl: "Total Marks",
+                card_exam_marks_val: "100 Marks (4 Subjects)",
+                card_exam_marks_note: "25 marks assigned for each subject",
+                subjects_head: "100 Marks Examination (25 Marks per Subject)",
+                subjects_sub: "Merit lists are prepared based on aggregate performance across all 4 subjects.",
+                subjects_badge: "4 Mandatory Subjects",
+                subj_bangla: "Bangla (বাংলা)",
+                subj_bangla_desc: "Grammar, literature, reading comprehension, and structured writing questions.",
+                subj_english: "English (ইংরেজি)",
+                subj_english_desc: "Grammar, vocabulary, comprehension passages, translation, and structured composition.",
+                subj_math: "General Math (গণিত)",
+                subj_math_desc: "Arithmetic, algebraic concepts, geometry, and analytical problem-solving.",
+                subj_science: "General Science & GK",
+                subj_science_desc: "Everyday science, Bangladesh and global affairs, and contemporary general knowledge.",
+                contacts_tag: "Helpline & Center Coordination",
+                contacts_title: "Center-Wise Contacts & Hotline Directory",
+                contacts_subtitle: "For registration guidance, center venues, seat plans, or urgent inquiries, connect with local coordinators:",
+                central_help_tag: "Bogura Central 24/7 Helpline",
+                central_phone: "+880 1700-000000",
+                central_help_time: "Dedicated telephone support active daily from 9:00 AM to 9:00 PM",
+                btn_direct_call: "Call Helpline",
+                btn_reg_query: "Registration Inquiry",
+                center_badge: "Exam Center",
+                center_adamdighi: "Adamdighi (আদমদীঘি)",
+                center_dupchanchia: "Dupchanchia (দুপচাঁচিয়া)",
+                center_kahalu: "Kahalu (কাহালু)",
+                center_nandigram: "Nandigram (নন্দীগ্রাম)",
+                center_mahasthan: "Mahasthangarh (মহাস্থানগড়)",
+                center_shibganj: "Shibganj (শিবগঞ্জ)",
+                center_mokamtola: "Mokamtola (মোকামতলা)",
+                center_pirgacha: "Pirgacha (পীরগাছা)",
+                center_coord_label: "Upazila Center Coordinator",
+                comm_tag: "Executive Leadership",
+                comm_title: "Committee Authorities & Directors",
+                comm_subtitle: "Distinguished organizers and leadership of The Brilliant Association, Bogura:",
+                role_member_sec: "Member Secretary",
+                name_kamruzzaman: "Kamruzzaman",
+                role_director: "Director",
+                name_huzaifa: "Abu Huzaifa",
+                role_dg: "Director General",
+                name_sabbir: "Saddam Hossain Sabbir",
+                org_line: "The Brilliant Association, Bogura",
+                auth_sec_desc: "Administration & Exam Coordination Council",
+                auth_dir_desc: "General Management & Planning Council",
+                auth_dg_desc: "Chief Executive & Policy Council",
+                notice_tag: "Official Notice Board",
+                notice_title: "Announcements & Notices",
+                btn_all_notices: "View All Notices",
+                nt_badge_reg: "Registration",
+                nt_1_title: "Scholarship 2026 Online Applications Open",
+                nt_1_desc: "Students of Class 4 to 9 can apply online until 31 October 2026. Complete your form and verify payment.",
+                nt_btn_apply: "Apply Now",
+                nt_badge_admit: "Admit Card",
+                nt_2_title: "Download Online Admit Cards",
+                nt_2_desc: "Verified candidates can download and print official admit cards using their Unique ID / TrxID from the portal.",
+                nt_btn_portal: "Visit Portal",
+                nt_badge_exam: "Exam Date",
+                nt_3_title: "Exam on Saturday, 19 December at 9:00 AM",
+                nt_3_desc: "The 3-hour scholarship examination will be conducted concurrently across all 8 designated centers.",
+                nt_btn_schedule: "View Schedule",
+                footer_brand: "The Brilliant Association",
+                footer_about: "Dedicated to inspiring academic excellence and supporting talented students across Bogura district through fair and structured scholarship awards.",
+                footer_links_title: "Quick Navigation",
+                nav_reg_link: "Student Registration",
+                nav_res_link: "Result & Admit Portal",
+                footer_contact_title: "Office & Contact",
+                footer_addr: "The Brilliant Association, Bogura District Office, Bogura - 5800, Bangladesh",
+                footer_lead_title: "Authorized Committee"
+            }
+        };
+
+        let currentPortalLang = localStorage.getItem('portal_lang') || 'bn';
+
+        function setLanguage(lang) {
+            currentPortalLang = (lang === 'en') ? 'en' : 'bn';
+            localStorage.setItem('portal_lang', currentPortalLang);
+            document.documentElement.lang = currentPortalLang;
+            applyPortalTranslations();
+            if (typeof syncDynamicCmsData === 'function') syncDynamicCmsData();
+        }
+
+        function applyPortalTranslations() {
+            const dict = translations[currentPortalLang] || translations.bn;
+            
+            // Update Active Buttons styling
+            const btnBn = document.getElementById('lang-btn-bn');
+            const btnEn = document.getElementById('lang-btn-en');
+            const mobBn = document.getElementById('mobile-lang-bn');
+            const mobEn = document.getElementById('mobile-lang-en');
+
+            if (btnBn && btnEn) {
+                if (currentPortalLang === 'en') {
+                    btnEn.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all bg-brand-600 text-white shadow-xs";
+                    btnBn.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900";
+                } else {
+                    btnBn.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all bg-brand-600 text-white shadow-xs";
+                    btnEn.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900";
+                }
+            }
+
+            if (mobBn && mobEn) {
+                if (currentPortalLang === 'en') {
+                    mobEn.className = "px-2 py-0.5 text-xs font-bold rounded bg-brand-600 text-white";
+                    mobBn.className = "px-2 py-0.5 text-xs font-bold rounded text-slate-600";
+                } else {
+                    mobBn.className = "px-2 py-0.5 text-xs font-bold rounded bg-brand-600 text-white";
+                    mobEn.className = "px-2 py-0.5 text-xs font-bold rounded text-slate-600";
+                }
+            }
+
+            // Apply translation to all data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key] !== undefined) {
+                    el.textContent = dict[key];
+                }
+            });
+        }
+
+        // Initialize Mobile Menu & Translations on DOM Ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (menuIcon) {
+                            menuIcon.classList.remove('fa-bars');
+                            menuIcon.classList.add('fa-xmark');
+                        }
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (menuIcon) {
+                            menuIcon.classList.remove('fa-xmark');
+                            menuIcon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                    if (menuIcon) {
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // Apply initial language
+            applyPortalTranslations();
+
+            // Render Dynamic Modules
+            renderDynamicNotices();
+            renderPublicGallery('ALL');
+            hydrateOrgProfile();
+            if (typeof syncDynamicCmsData === 'function') syncDynamicCmsData();
+        });
+
+        // Secret Keyboard Shortcut for Admin Access: Ctrl + Shift + A or Cmd + Shift + A
+        window.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+                e.preventDefault();
+                window.location.href = 'admin.html';
+            }
+        });
+
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyvgJH9U_1b2ErwgPIFmmqbRlkDjBvHcbh9ie5-IPpCOolWZkwJOe24krlnAtKwHiIKMQ/exec";
+
+        // ==============================================================================
+        // DYNAMIC NOTICES RENDERING & TOP MARQUEE SYNC
+        // ==============================================================================
+        function renderDynamicNotices() {
+            const container = document.getElementById('public-notices-container');
+            const marqueeEl = document.querySelector('[data-i18n="top_announcement_text"]');
+
+            // Check if custom marquee notice exists in exam schedule
+            let hasCustomScheduleMarquee = false;
+            try {
+                const schedRaw = localStorage.getItem('tba_exam_schedule');
+                if (schedRaw) {
+                    const sched = JSON.parse(schedRaw);
+                    if (sched && sched.topNoticeText && sched.topNoticeText.trim() && marqueeEl) {
+                        marqueeEl.textContent = sched.topNoticeText.trim();
+                        hasCustomScheduleMarquee = true;
+                    }
+                }
+            } catch (e) {}
+
+            let stored = [];
+            try {
+                const raw = localStorage.getItem('tba_notices');
+                if (raw) stored = JSON.parse(raw);
+            } catch (e) {}
+
+            // Filter active notices
+            const activeNotices = Array.isArray(stored) ? stored.filter(n => n.active !== false && n.active !== 'false') : [];
+
+            // Update top announcement marquee if notices exist and schedule marquee was not explicitly set
+            if (!hasCustomScheduleMarquee && activeNotices.length > 0 && marqueeEl) {
+                const topNotice = activeNotices[0];
+                marqueeEl.textContent = `${topNotice.title} | ${topNotice.date} — ${topNotice.content ? topNotice.content.slice(0, 110) + '...' : ''}`;
+            }
+
+            if (!container) return;
+            if (activeNotices.length === 0) return; // Keep default circular notices HTML if none
+
+            container.innerHTML = '';
+            activeNotices.forEach(n => {
+                const card = document.createElement('div');
+                card.className = "p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between";
+                
+                const catColors = {
+                    'Registration': 'bg-brand-100 text-brand-800',
+                    'Admit Card': 'bg-amber-100 text-amber-800',
+                    'Exam Routine': 'bg-emerald-100 text-emerald-800',
+                    'Exam Schedule': 'bg-emerald-100 text-emerald-800',
+                    'Scholarship Result': 'bg-purple-100 text-purple-800',
+                    'Result': 'bg-purple-100 text-purple-800',
+                    'General': 'bg-slate-200 text-slate-800'
+                };
+                const colorClass = catColors[n.category] || 'bg-brand-100 text-brand-800';
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                            <span class="font-bold px-3 py-1 rounded-full ${colorClass}">${n.category || 'নোটিশ'}</span>
+                            <span class="font-mono">${n.date || ''}</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-2">${n.title || ''}</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">${n.content || ''}</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-slate-200 flex items-center justify-between">
+                        ${n.fileUrl ? `<a href="${n.fileUrl}" target="_blank" class="text-xs font-bold text-brand-600 hover:underline flex items-center gap-1"><i class="fa-solid fa-paperclip"></i> সার্কুলার / ফাইল</a>` : ''}
+                        <a href="registration.html" class="text-xs font-bold text-brand-600 hover:underline flex items-center gap-1 ml-auto">
+                            <span>আবেদন করুন</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            // Silent background sync
+            fetch(`${WEB_APP_URL}?action=getNotices`)
+                .then(r => r.json())
+                .then(remote => {
+                    if (Array.isArray(remote) && remote.length > 0) {
+                        localStorage.setItem('tba_notices', JSON.stringify(remote));
+                    }
+                })
+                .catch(() => {});
+        }
+
+        // ==============================================================================
+        // DYNAMIC PHOTO GALLERY & LIGHTBOX (FILTER HIDDEN PHOTOS)
+        // ==============================================================================
+        const DEFAULT_PUBLIC_GALLERY = [
+            {
+                id: 'GAL-1',
+                title: 'মেধাবৃত্তি পুরস্কার বিতরণী ২০২৫',
+                category: 'Prize Giving',
+                imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+                date: '2025-12-25',
+                description: 'বগুড়া জেলা পরিষদ মিলনায়তনে কৃতি শিক্ষার্থীদের সনদ ও বৃত্তি প্রদান'
+            },
+            {
+                id: 'GAL-2',
+                title: 'পরীক্ষা কেন্দ্রে শিক্ষার্থীদের শৃঙ্খলা',
+                category: 'Exam Day',
+                imageUrl: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80',
+                date: '2025-12-20',
+                description: 'বগুড়া সরকারি বালিকা উচ্চ বিদ্যালয় কেন্দ্রে অনুষ্ঠিত বৃত্তি পরীক্ষা'
+            },
+            {
+                id: 'GAL-3',
+                title: 'অভিভাবক ও সুধীজন সমাবেশ',
+                category: 'Orientation',
+                imageUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+                date: '2025-10-15',
+                description: 'পরীক্ষা ব্যবস্থাপনা ও স্বচ্ছতা নিয়ে অভিভাবক ও সুধী সমাবেশ'
+            },
+            {
+                id: 'GAL-4',
+                title: 'সাংস্কৃতিক অনুষ্ঠান ও ক্রেস্ট প্রদান',
+                category: 'Cultural',
+                imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80',
+                date: '2025-12-25',
+                description: 'বৃত্তি প্রদান শেষে মনোজ্ঞ সাংস্কৃতিক পরিবেশনা'
+            }
+        ];
+
+        let activePublicGalleryCategory = 'ALL';
+
+        function renderPublicGallery(filterCategory = 'ALL') {
+            const grid = document.getElementById('public-gallery-grid');
+            if (!grid) return;
+
+            activePublicGalleryCategory = filterCategory;
+            let photos = DEFAULT_PUBLIC_GALLERY;
+            try {
+                const raw = localStorage.getItem('tba_gallery');
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    if (Array.isArray(parsed) && parsed.length > 0) photos = parsed;
+                }
+            } catch (e) {}
+
+            // Exclude hidden photos
+            const visiblePhotos = photos.filter(p => !(p.hidden === true || p.hidden === 'true'));
+
+            let filtered = visiblePhotos;
+            if (filterCategory !== 'ALL') {
+                filtered = visiblePhotos.filter(p => p.category === filterCategory);
+            }
+
+            grid.innerHTML = '';
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-400 text-xs">
+                        <i class="fa-solid fa-images text-3xl text-slate-300 block mb-2 mx-auto"></i>
+                        এই ক্যাটাগরিতে কোনো ছবি পাওয়া যায়নি।
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const item = document.createElement('div');
+                item.className = "group relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col";
+                item.onclick = () => openGalleryLightbox(p.imageUrl, p.title, p.description);
+                item.innerHTML = `
+                    <div class="h-48 w-full bg-slate-100 overflow-hidden relative">
+                        <img src="${p.imageUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-expand"></i> বড় করে দেখুন</span>
+                        </div>
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold">
+                            ${p.category || 'ইভেন্ট'}
+                        </span>
+                    </div>
+                    <div class="p-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-mono text-slate-400">${p.date || ''}</span>
+                            <h4 class="font-extrabold text-slate-900 text-sm mt-0.5 line-clamp-1">${p.title || 'ছবি'}</h4>
+                            ${p.description ? `<p class="text-xs text-slate-500 line-clamp-2 mt-1 leading-relaxed">${p.description}</p>` : ''}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(item);
+            });
+
+            // Silent background sync
+            fetch(`${WEB_APP_URL}?action=getGallery`)
+                .then(r => r.json())
+                .then(remote => {
+                    if (Array.isArray(remote) && remote.length > 0) {
+                        localStorage.setItem('tba_gallery', JSON.stringify(remote));
+                    }
+                })
+                .catch(() => {});
+        }
+
+        function filterPublicGallery(cat) {
+            const pills = document.querySelectorAll('#gallery-category-pills .gallery-pill');
+            pills.forEach(btn => {
+                const btnCat = btn.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+                if (btnCat === cat) {
+                    btn.className = "gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-xs";
+                } else {
+                    btn.className = "gallery-pill px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-white border border-slate-200 text-slate-600 hover:bg-slate-100";
+                }
+            });
+            renderPublicGallery(cat);
+        }
+        window.filterPublicGallery = filterPublicGallery;
+
+        function openGalleryLightbox(imgUrl, title, desc) {
+            const modal = document.getElementById('gallery-lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const titleEl = document.getElementById('lightbox-title');
+            const descEl = document.getElementById('lightbox-desc');
+            if (!modal || !img) return;
+
+            img.src = imgUrl;
+            if (titleEl) titleEl.textContent = title || '';
+            if (descEl) descEl.textContent = desc || '';
+            modal.classList.remove('hidden');
+        }
+        window.openGalleryLightbox = openGalleryLightbox;
+
+        function closeGalleryLightbox() {
+            const modal = document.getElementById('gallery-lightbox-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+        window.closeGalleryLightbox = closeGalleryLightbox;
+
+        // ==============================================================================
+        // HYDRATE ORGANIZATION DETAILS & LEADERSHIP
+        // ==============================================================================
+        function hydrateOrgProfile() {
+            try {
+                const raw = localStorage.getItem('tba_org_settings');
+                if (!raw) return;
+                const org = JSON.parse(raw);
+                if (!org) return;
+
+                if (org.hotline) {
+                    const centralPhone = document.querySelector('[data-i18n="central_phone"]');
+                    if (centralPhone) centralPhone.textContent = org.hotline;
+                    const footerPhone = document.getElementById('footer-phone');
+                    if (footerPhone) footerPhone.textContent = org.hotline;
+                }
+                if (org.address) {
+                    const footerAddr = document.querySelector('[data-i18n="footer_addr"]');
+                    if (footerAddr) footerAddr.textContent = org.address;
+                }
+                if (org.email) {
+                    const footerEmail = document.getElementById('footer-email');
+                    if (footerEmail) footerEmail.textContent = org.email;
+                }
+                if (org.fbLink) {
+                    const fbLink = document.getElementById('footer-fb-link');
+                    if (fbLink) fbLink.href = org.fbLink;
+                }
+                if (org.ytLink) {
+                    const ytLink = document.getElementById('footer-yt-link');
+                    if (ytLink) ytLink.href = org.ytLink;
+                }
+                if (org.websiteUrl) {
+                    const webLink = document.getElementById('footer-web-link');
+                    if (webLink) webLink.href = org.websiteUrl;
+                }
+                if (org.secretary) {
+                    const secName = document.querySelector('[data-i18n="name_kamruzzaman"]');
+                    if (secName) secName.textContent = org.secretary;
+                }
+                if (org.director) {
+                    const dirName = document.querySelector('[data-i18n="name_huzaifa"]');
+                    if (dirName) dirName.textContent = org.director;
+                }
+                if (org.directorGeneral) {
+                    const dgName = document.querySelector('[data-i18n="name_sabbir"]');
+                    if (dgName) dgName.textContent = org.directorGeneral;
+                }
+            } catch (e) {}
+
+            // Background fetch from backend
+            fetch(`${WEB_APP_URL}?action=getOrgSettings`)
+                .then(r => r.json())
+                .then(remote => {
+                    if (remote && remote.orgName) {
+                        localStorage.setItem('tba_org_settings', JSON.stringify(remote));
+                    }
+                })
+                .catch(() => {});
+        }
+
+        // ==============================================================================
+        // DYNAMIC CMS DATA BINDING (EXAM SCHEDULE & COMMITTEE MEMBERS)
+        // ==============================================================================
+        function syncDynamicCmsData(skipRemoteFetch) {
+            try {
+                // 1. Sync Exam Schedule & Notices
+                const schedRaw = localStorage.getItem('tba_exam_schedule');
+                if (schedRaw) {
+                    const sched = JSON.parse(schedRaw);
+                    if (sched && typeof sched === 'object') {
+                        // Top Announcement Marquee
+                        if (sched.topNoticeText && sched.topNoticeText.trim()) {
+                            const topMarquee = document.querySelector('[data-i18n="top_announcement_text"]');
+                            if (topMarquee) topMarquee.textContent = sched.topNoticeText.trim();
+                        }
+                        // Quick Exam Badge (Top Right)
+                        if (sched.examBadgeQuick && sched.examBadgeQuick.trim()) {
+                            const topBadge = document.querySelector('[data-i18n="top_exam_quick"]');
+                            if (topBadge) topBadge.textContent = sched.examBadgeQuick.trim();
+                        }
+                        // Circular Badge / Exam Year
+                        if (sched.examYear && sched.examYear.trim()) {
+                            const circBadge = document.querySelector('[data-i18n="top_circular_badge"]');
+                            if (circBadge) circBadge.textContent = `সার্কুলার ${sched.examYear.trim()}`;
+                        }
+                        // Exam Date & Day
+                        if (sched.examDateDay && sched.examDateDay.trim()) {
+                            const dateEls = document.querySelectorAll('[data-i18n="card_exam_date_val"], [data-i18n="val_exam_date"]');
+                            dateEls.forEach(el => el.textContent = sched.examDateDay.trim());
+                        }
+                        // Exam Time
+                        if (sched.examTime && sched.examTime.trim()) {
+                            const timeEl = document.querySelector('[data-i18n="card_exam_time_val"]');
+                            if (timeEl) timeEl.textContent = sched.examTime.trim();
+                        }
+                        // Exam Duration
+                        if (sched.examDuration && sched.examDuration.trim()) {
+                            const durEl = document.querySelector('[data-i18n="card_exam_dur_val"]');
+                            if (durEl) durEl.textContent = sched.examDuration.trim();
+                            const heroDur = document.getElementById('hero-exam-duration');
+                            if (heroDur) heroDur.textContent = sched.examDuration.trim();
+                        }
+                        // Registration Period
+                        if (sched.regPeriod && sched.regPeriod.trim()) {
+                            const heroReg = document.getElementById('hero-reg-timeline');
+                            if (heroReg) heroReg.textContent = sched.regPeriod.trim();
+                            const regVal = document.querySelector('[data-i18n="val_reg_timeline"]');
+                            if (regVal) regVal.textContent = sched.regPeriod.trim();
+                        }
+                    }
+                }
+
+                // 2. Sync Authority Committee Members
+                const commRaw = localStorage.getItem('tba_committee_members');
+                if (commRaw) {
+                    const comm = JSON.parse(commRaw);
+                    if (comm && typeof comm === 'object') {
+                        // Member Secretary
+                        if (comm.sec) {
+                            if (comm.sec.name && comm.sec.name.trim()) {
+                                document.querySelectorAll('[data-i18n="name_kamruzzaman"]').forEach(el => el.textContent = comm.sec.name.trim());
+                            }
+                            if (comm.sec.council && comm.sec.council.trim()) {
+                                document.querySelectorAll('[data-i18n="auth_sec_desc"]').forEach(el => el.textContent = comm.sec.council.trim());
+                            }
+                            if (comm.sec.photo && comm.sec.photo.trim()) {
+                                const photoSec = document.getElementById('comm-photo-sec');
+                                if (photoSec) {
+                                    photoSec.innerHTML = `<img src="${comm.sec.photo.trim()}" alt="${comm.sec.name || 'Member Secretary'}" class="w-full h-full object-cover">`;
+                                }
+                            }
+                        }
+
+                        // Director
+                        if (comm.dir) {
+                            if (comm.dir.name && comm.dir.name.trim()) {
+                                document.querySelectorAll('[data-i18n="name_huzaifa"]').forEach(el => el.textContent = comm.dir.name.trim());
+                            }
+                            if (comm.dir.council && comm.dir.council.trim()) {
+                                document.querySelectorAll('[data-i18n="auth_dir_desc"]').forEach(el => el.textContent = comm.dir.council.trim());
+                            }
+                            if (comm.dir.photo && comm.dir.photo.trim()) {
+                                const photoDir = document.getElementById('comm-photo-dir');
+                                if (photoDir) {
+                                    photoDir.innerHTML = `<img src="${comm.dir.photo.trim()}" alt="${comm.dir.name || 'Director'}" class="w-full h-full object-cover">`;
+                                }
+                            }
+                        }
+
+                        // Director General
+                        if (comm.dg) {
+                            if (comm.dg.name && comm.dg.name.trim()) {
+                                document.querySelectorAll('[data-i18n="name_sabbir"]').forEach(el => el.textContent = comm.dg.name.trim());
+                            }
+                            if (comm.dg.council && comm.dg.council.trim()) {
+                                document.querySelectorAll('[data-i18n="auth_dg_desc"]').forEach(el => el.textContent = comm.dg.council.trim());
+                            }
+                            if (comm.dg.photo && comm.dg.photo.trim()) {
+                                const photoDg = document.getElementById('comm-photo-dg');
+                                if (photoDg) {
+                                    photoDg.innerHTML = `<img src="${comm.dg.photo.trim()}" alt="${comm.dg.name || 'Director General'}" class="w-full h-full object-cover">`;
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (err) {
+                console.warn('Error syncing dynamic CMS data:', err);
+            }
+
+            // Remote background fetch (if not skipped)
+            if (!skipRemoteFetch) {
+                // Fetch exam schedule
+                fetch(`${WEB_APP_URL}?action=getExamSchedule`)
+                    .then(r => r.json())
+                    .then(remote => {
+                        if (remote && (remote.examDateDay || remote.topNoticeText)) {
+                            localStorage.setItem('tba_exam_schedule', JSON.stringify(remote));
+                            syncDynamicCmsData(true);
+                        }
+                    })
+                    .catch(() => {});
+
+                // Fetch committee members
+                fetch(`${WEB_APP_URL}?action=getCommitteeMembers`)
+                    .then(r => r.json())
+                    .then(remote => {
+                        if (remote && (remote.sec || remote.dir || remote.dg)) {
+                            localStorage.setItem('tba_committee_members', JSON.stringify(remote));
+                            syncDynamicCmsData(true);
+                        }
+                    })
+                    .catch(() => {});
+            }
+        }
+
+        // Cross-tab real-time sync with admin panel actions
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'tba_gallery') {
+                renderPublicGallery(activePublicGalleryCategory);
+            } else if (e.key === 'tba_notices') {
+                renderDynamicNotices();
+            } else if (e.key === 'tba_org_settings') {
+                hydrateOrgProfile();
+            } else if (e.key === 'tba_exam_schedule' || e.key === 'tba_committee_members') {
+                syncDynamicCmsData(true);
+            }
+        });
+    </script>
+</body>
+</html>

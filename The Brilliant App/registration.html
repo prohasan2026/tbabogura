@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | The Brilliant Association, Bogura</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        bkash: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            500: '#e2136e',
+                            600: '#c2105e',
+                            700: '#9e0d4d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Prevent iOS Safari auto-zoom on input focus */
+        @media (max-width: 640px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION BAR                             -->
+    <!-- ========================================== -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo & Name -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-lg font-bold text-slate-900 leading-tight">The Brilliant Association</span>
+                        <span class="block text-xs font-semibold text-brand-600 tracking-wider uppercase">Bogura, Bangladesh</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Home</a>
+                    <a href="index.html#notice" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Notice</a>
+                    <a href="registration.html" class="text-sm font-semibold text-brand-600 transition-colors">Registration</a>
+                    <a href="result.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Result Portal</a>
+                    <a href="status.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Payment Status</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Home</a>
+            <a href="index.html#notice" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Notice</a>
+            <a href="registration.html" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-600 bg-brand-50">Registration</a>
+            <a href="result.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Result Portal</a>
+            <a href="status.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Payment Status</a>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- MAIN REGISTRATION FORM SECTION             -->
+    <!-- ========================================== -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+        
+        <!-- Header Banner -->
+        <div class="text-center mb-10">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3">
+                <i class="fa-solid fa-file-pen"></i> Scholarship 2026
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Student Registration Form</h1>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+                Fill out the required information carefully to enroll in the annual scholarship examination.
+            </p>
+        </div>
+
+        <!-- Registration Form Card -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+            
+            <!-- Top Form Banner -->
+            <div class="bg-gradient-to-r from-brand-800 via-brand-700 to-indigo-700 px-4 sm:px-10 py-5 sm:py-6 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold">Application Form</h2>
+                    <p class="text-xs text-brand-100">Please provide accurate information as per student school record.</p>
+                </div>
+                <div id="header-fee-badge" class="px-3.5 py-1.5 rounded-xl bg-white/10 backdrop-blur-md text-xs font-semibold border border-white/20 self-start sm:self-auto flex items-center gap-1.5">
+                    <span>Registration Fee:</span>
+                    <span id="header-fee-text" class="font-extrabold text-amber-300">Class 4-6: 180 BDT | Class 7-9: 200 BDT</span>
+                </div>
+            </div>
+
+            <!-- Form Body -->
+            <form id="studentRegistrationForm" class="p-4 sm:p-8 lg:p-10 space-y-8 sm:space-y-10">
+                
+                <!-- Alert Message Box -->
+                <div id="error-alert" class="hidden p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-start gap-3">
+                    <i class="fa-solid fa-circle-exclamation text-lg mt-0.5 flex-shrink-0"></i>
+                    <div id="error-alert-text">Please fix the highlighted errors below before submitting.</div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- SECTION 1: PERSONAL INFORMATION            -->
+                <!-- ========================================== -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm">1</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Personal Information (ব্যক্তিগত তথ্য)</h3>
+                            <p class="text-xs text-slate-500">Provide candidate & parents details in both English and Bengali.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Student Name (English) -->
+                        <div class="space-y-2">
+                            <label for="studentNameEnglish" class="block text-sm font-bold text-slate-700">
+                                Student's Full Name (English) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" id="studentNameEnglish" name="studentNameEnglish" required
+                                    placeholder="e.g. Tanvir Hasan"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Student Name (Bengali) -->
+                        <div class="space-y-2">
+                            <label for="studentNameBangla" class="block text-sm font-bold text-slate-700">
+                                শিক্ষার্থীর পুরো নাম (বাংলা) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-signature"></i>
+                                </span>
+                                <input type="text" id="studentNameBangla" name="studentNameBangla" required
+                                    placeholder="যেমন: তানভীর হাসান"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Father's Name (English) -->
+                        <div class="space-y-2">
+                            <label for="fatherName" class="block text-sm font-bold text-slate-700">
+                                Father's Name (English) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </span>
+                                <input type="text" id="fatherName" name="fatherName" required
+                                    placeholder="e.g. Md. Abul Hossain"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Father's Name (Bengali) -->
+                        <div class="space-y-2">
+                            <label for="fatherBengali" class="block text-sm font-bold text-slate-700">
+                                পিতার নাম (বাংলা) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </span>
+                                <input type="text" id="fatherBengali" name="fatherBengali" required
+                                    placeholder="যেমন: মো: আবুল হোসেন"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Mother's Name (English) -->
+                        <div class="space-y-2">
+                            <label for="motherName" class="block text-sm font-bold text-slate-700">
+                                Mother's Name (English) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-person-breastfeeding"></i>
+                                </span>
+                                <input type="text" id="motherName" name="motherName" required
+                                    placeholder="e.g. Rashida Begum"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Mother's Name (Bengali) -->
+                        <div class="space-y-2">
+                            <label for="motherBengali" class="block text-sm font-bold text-slate-700">
+                                মাতার নাম (বাংলা) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-person-breastfeeding"></i>
+                                </span>
+                                <input type="text" id="motherBengali" name="motherBengali" required
+                                    placeholder="যেমন: রাশিদা বেগম"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="space-y-2 md:col-span-2">
+                            <label for="mobileNumber" class="block text-sm font-bold text-slate-700">
+                                Contact Mobile Number (মোবাইল নম্বর) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                <input type="tel" id="mobileNumber" name="mobileNumber" required maxlength="11" pattern="^01[3-9]\d{8}$"
+                                    title="১১ ডিজিটের বাংলাদেশি মোবাইল নম্বর দিন (যেমন: 017XXXXXXXX)"
+                                    placeholder="017XXXXXXXX"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Student Photo Upload (Max 2MB) -->
+                        <div class="col-span-1 md:col-span-2 p-5 bg-gradient-to-r from-slate-50 to-blue-50/40 border border-slate-200 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row items-center gap-5">
+                                <!-- Photo Preview Container -->
+                                <div class="relative w-28 h-32 rounded-xl border-2 border-dashed border-slate-300 bg-white flex flex-col items-center justify-center overflow-hidden flex-shrink-0 shadow-2xs group">
+                                    <div id="photo-placeholder" class="flex flex-col items-center justify-center text-slate-400 p-2 text-center">
+                                        <i class="fa-solid fa-camera text-2xl mb-1 text-slate-400"></i>
+                                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Photo</span>
+                                    </div>
+                                    <img id="photo-preview-img" src="" alt="Candidate Photo" class="hidden w-full h-full object-cover">
+                                </div>
+
+                                <!-- Photo Upload Information & Button -->
+                                <div class="space-y-2 text-center sm:text-left flex-grow">
+                                    <div>
+                                        <label class="block text-sm font-bold text-slate-800">
+                                            Candidate Photograph (পাসপোর্ট সাইজ ছবি) <span class="text-rose-500">*</span>
+                                        </label>
+                                        <p class="text-xs text-slate-500 mt-0.5">
+                                             Upload a clear passport-size photo (JPG, PNG). Maximum allowed size: <strong class="text-brand-600">2MB</strong>.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-wrap items-center gap-2.5 justify-center sm:justify-start">
+                                        <label for="studentPhoto" class="cursor-pointer px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold shadow-xs inline-flex items-center gap-1.5 transition-all hover:-translate-y-0.5">
+                                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                                            <span>Upload Photo</span>
+                                        </label>
+                                        <input type="file" id="studentPhoto" name="studentPhoto" accept="image/*" required class="sr-only">
+                                        <button type="button" id="photo-remove-btn" onclick="removeStudentPhoto()" class="hidden px-3 py-2 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-100 text-xs font-bold transition-all">
+                                            <i class="fa-solid fa-trash-can mr-1"></i> Remove
+                                        </button>
+                                        <span id="photo-status-text" class="text-xs text-slate-400 font-medium italic">No photo chosen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- SECTION 2: ACADEMIC INFORMATION            -->
+                <!-- ========================================== -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm">2</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Academic Information (প্রাতিষ্ঠানিক তথ্য)</h3>
+                            <p class="text-xs text-slate-500">Institution category, school/madrasah name, class and exam center.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Institution Type -->
+                        <div class="space-y-2">
+                            <label for="institutionType" class="block text-sm font-bold text-slate-700">
+                                Institution Type <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </span>
+                                <select id="institutionType" name="institutionType" required
+                                    class="w-full pl-10 pr-10 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all appearance-none cursor-pointer">
+                                    <option value="School" selected>School (স্কুল)</option>
+                                    <option value="Madrasah">Madrasah (মাদ্রাসা)</option>
+                                </select>
+                                <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Class Dropdown (Class 4 to 9) -->
+                        <div class="space-y-2">
+                            <label for="studentClass" class="block text-sm font-bold text-slate-700">
+                                Select Class <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </span>
+                                <select id="studentClass" name="studentClass" required
+                                    class="w-full pl-10 pr-10 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Select Class (Class 4 to 9)</option>
+                                    <option value="Class 4">Class 4</option>
+                                    <option value="Class 5">Class 5</option>
+                                    <option value="Class 6">Class 6</option>
+                                    <option value="Class 7">Class 7</option>
+                                    <option value="Class 8">Class 8</option>
+                                    <option value="Class 9">Class 9</option>
+                                </select>
+                                <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </span>
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- School Name (English) -->
+                        <div class="space-y-2">
+                            <label for="schoolName" class="block text-sm font-bold text-slate-700">
+                                School / Institution (English) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-school"></i>
+                                </span>
+                                <input type="text" id="schoolName" name="schoolName" required list="school-datalist"
+                                    placeholder="e.g. Bogura Zilla School"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                                <datalist id="school-datalist"></datalist>
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- School Name (Bengali) -->
+                        <div class="space-y-2">
+                            <label for="schoolBengali" class="block text-sm font-bold text-slate-700">
+                                শিক্ষা প্রতিষ্ঠানের নাম (বাংলা) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-school-flag"></i>
+                                </span>
+                                <input type="text" id="schoolBengali" name="schoolBengali" required
+                                    placeholder="যেমন: বগুড়া জিলা স্কুল"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Exam Center Dropdown (8 Official Centers) -->
+                        <div class="col-span-1 md:col-span-2 lg:col-span-4 space-y-2">
+                            <label for="examCenter" class="block text-sm font-bold text-slate-700">
+                                Select Exam Center (পরীক্ষা কেন্দ্র) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+                                <select id="examCenter" name="examCenter" required
+                                    class="w-full pl-10 pr-10 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Select Exam Center (8 Centers)</option>
+                                    <option value="Adamdighi">Adamdighi (আদমদীঘি)</option>
+                                    <option value="Dupchanchia">Dupchanchia (দুপচাঁচিয়া)</option>
+                                    <option value="Kahalu">Kahalu (কাহালু)</option>
+                                    <option value="Nandigram">Nandigram (নন্দীগ্রাম)</option>
+                                    <option value="Mahasthangarh">Mahasthangarh (মহাস্থানগড়)</option>
+                                    <option value="Shibganj">Shibganj (শিবগঞ্জ)</option>
+                                    <option value="Mokamtola">Mokamtola (মোকামতলা)</option>
+                                    <option value="Pirgacha">Pirgacha (পীরগাছা)</option>
+                                </select>
+                                <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </span>
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- SECTION 3: ADDRESS INFORMATION             -->
+                <!-- ========================================== -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm">3</div>
+                        <h3 class="text-lg font-bold text-slate-900">Address Details</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Village -->
+                        <div class="space-y-2">
+                            <label for="village" class="block text-sm font-bold text-slate-700">
+                                Village / Area <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="village" name="village" required
+                                placeholder="e.g. Jhaotola"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Union -->
+                        <div class="space-y-2">
+                            <label for="union" class="block text-sm font-bold text-slate-700">
+                                Union / Ward <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="union" name="union" required
+                                placeholder="e.g. Ward 05"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- Upazila -->
+                        <div class="space-y-2">
+                            <label for="upazila" class="block text-sm font-bold text-slate-700">
+                                Upazila <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="upazila" name="upazila" required
+                                placeholder="e.g. Bogura Sadar"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- District -->
+                        <div class="space-y-2">
+                            <label for="district" class="block text-sm font-bold text-slate-700">
+                                District <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="district" name="district" required value="Bogura"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all font-semibold">
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- SECTION 4: PAYMENT SECTION (MULTI-GATEWAY) -->
+                <!-- ========================================== -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm">4</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Payment Verification (পেমেন্ট ভেরিফিকেশন)</h3>
+                            <p class="text-xs text-slate-500">বিকাশ, নগদ অথবা রকেটের মাধ্যমে নিবন্ধন ফি প্রদান করুন</p>
+                        </div>
+                    </div>
+
+                    <!-- Hidden input to store chosen payment method -->
+                    <input type="hidden" id="selectedPaymentMethod" name="paymentMethod" value="bKash">
+
+                    <!-- Gateway Selection Tabs -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+                            পেমেন্ট মাধ্যম বেছে নিন (Select Payment Gateway) <span class="text-rose-500">*</span>
+                        </label>
+                        <div id="payment-gateways-container" class="grid grid-cols-3 gap-2.5 sm:gap-4">
+                            <!-- Gateway Tab 1: bKash -->
+                            <button type="button" id="tab-gateway-bkash" onclick="selectPaymentGateway('bkash')"
+                                class="gateway-tab flex flex-col sm:flex-row items-center justify-center gap-2 p-3 sm:p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer bg-white border-slate-200 hover:border-pink-300 shadow-xs">
+                                <span class="w-8 h-8 rounded-lg bg-[#e2136e] text-white font-black flex items-center justify-center text-sm shadow-xs flex-shrink-0">
+                                    b
+                                </span>
+                                <div class="text-center sm:text-left">
+                                    <span class="block text-xs sm:text-sm font-extrabold text-slate-900">bKash</span>
+                                    <span class="block text-[10px] text-slate-500 font-semibold">বিকাশ</span>
+                                </div>
+                            </button>
+
+                            <!-- Gateway Tab 2: Nagad -->
+                            <button type="button" id="tab-gateway-nagad" onclick="selectPaymentGateway('nagad')"
+                                class="gateway-tab flex flex-col sm:flex-row items-center justify-center gap-2 p-3 sm:p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer bg-white border-slate-200 hover:border-orange-300 shadow-xs">
+                                <span class="w-8 h-8 rounded-lg bg-[#f97316] text-white font-black flex items-center justify-center text-sm shadow-xs flex-shrink-0">
+                                    ন
+                                </span>
+                                <div class="text-center sm:text-left">
+                                    <span class="block text-xs sm:text-sm font-extrabold text-slate-900">Nagad</span>
+                                    <span class="block text-[10px] text-slate-500 font-semibold">নগদ</span>
+                                </div>
+                            </button>
+
+                            <!-- Gateway Tab 3: Rocket -->
+                            <button type="button" id="tab-gateway-rocket" onclick="selectPaymentGateway('rocket')"
+                                class="gateway-tab flex flex-col sm:flex-row items-center justify-center gap-2 p-3 sm:p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer bg-white border-slate-200 hover:border-purple-300 shadow-xs">
+                                <span class="w-8 h-8 rounded-lg bg-[#8b5cf6] text-white font-black flex items-center justify-center text-sm shadow-xs flex-shrink-0">
+                                    R
+                                </span>
+                                <div class="text-center sm:text-left">
+                                    <span class="block text-xs sm:text-sm font-extrabold text-slate-900">Rocket</span>
+                                    <span class="block text-[10px] text-slate-500 font-semibold">রকেট</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Payment Instruction Card -->
+                    <div id="payment-instruction-card" class="p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-pink-50 via-white to-rose-50 border-2 border-pink-400/40 shadow-md relative overflow-hidden transition-all duration-300">
+                        
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 pb-4 border-b border-pink-100" id="payment-card-header">
+                            <div class="flex items-center gap-3">
+                                <div id="payment-gateway-icon" class="w-10 h-10 rounded-xl bg-[#e2136e] text-white font-black flex items-center justify-center text-lg shadow-md shadow-pink-500/20">
+                                    b
+                                </div>
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <h4 id="payment-gateway-title" class="font-extrabold text-slate-900 text-base">bKash Manual Payment Instruction</h4>
+                                        <span id="payment-account-type-badge" class="text-[10px] bg-slate-100 text-slate-700 font-bold px-2 py-0.5 rounded-full border border-slate-200">Personal (Send Money)</span>
+                                    </div>
+                                    <p id="payment-gateway-subtitle" class="text-xs text-slate-500">অফিসিয়াল নম্বরে ফি পাঠিয়ে TrxID সংগ্রহ করুন</p>
+                                </div>
+                            </div>
+                            <div id="payment-fee-badge" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#e2136e] text-white text-xs font-black self-start sm:self-auto shadow-sm transition-all duration-300">
+                                <span>Fee:</span>
+                                <span id="display-fee-amount" class="text-sm font-black">180</span>
+                                <span>BDT</span>
+                                <span id="display-fee-tier" class="text-[10px] bg-white/20 text-white font-extrabold px-2 py-0.5 rounded-full ml-1">Tier 1</span>
+                            </div>
+                        </div>
+
+                        <div class="py-4 space-y-3 text-xs sm:text-sm text-slate-700">
+                            <!-- Step 1 -->
+                            <div class="flex items-start gap-2.5">
+                                <span id="step-num-1" class="w-5 h-5 rounded-full bg-[#e2136e] text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">1</span>
+                                <p id="step-instruction-1">Open your bKash App or dial <strong>*247#</strong> and select <strong>Send Money</strong>.</p>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="flex items-start gap-2.5">
+                                <span id="step-num-2" class="w-5 h-5 rounded-full bg-[#e2136e] text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">2</span>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span>Send <strong id="step-fee-amount" class="text-[#e2136e] font-black">180 BDT</strong> to the official <span id="step-gateway-label">bKash</span> Number:</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-900 font-extrabold font-mono text-sm shadow-xs">
+                                        <i class="fa-solid fa-phone text-xs text-slate-500"></i> 
+                                        <span id="display-payment-number">01700-000000</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="flex items-start gap-2.5">
+                                <span id="step-num-3" class="w-5 h-5 rounded-full bg-[#e2136e] text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">3</span>
+                                <p id="step-instruction-3">Copy the <strong>TrxID (Transaction ID)</strong> from confirmation SMS and enter it below.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Payment Input Fields -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                        <!-- Sender Mobile Number -->
+                        <div class="space-y-2">
+                            <label for="senderNumber" id="label-sender-number" class="block text-sm font-bold text-slate-700">
+                                Sender bKash Number <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span id="sender-icon-box" class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#e2136e] font-bold text-sm">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </span>
+                                <input type="tel" id="senderNumber" name="senderNumber" required maxlength="11" pattern="^01[3-9]\d{8}$"
+                                    title="১১ ডিজিটের বাংলাদেশি মোবাইল নম্বর দিন (যেমন: 017XXXXXXXX)"
+                                    placeholder="017XXXXXXXX"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+
+                        <!-- TrxID -->
+                        <div class="space-y-2">
+                            <label for="trxId" id="label-trx-id" class="block text-sm font-bold text-slate-700">
+                                bKash Transaction ID (TrxID) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span id="trx-icon-box" class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#e2136e] font-bold text-sm">
+                                    <i class="fa-solid fa-receipt"></i>
+                                </span>
+                                <input type="text" id="trxId" name="trxId" required
+                                    placeholder="e.g. BL9A7K8M92" uppercase
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-mono text-sm tracking-wider uppercase focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                            </div>
+                            <p class="error-msg text-xs text-rose-500 hidden"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- SECTION 5: SUBMIT BUTTON                   -->
+                <!-- ========================================== -->
+                <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-xs text-slate-500 text-center sm:text-left">
+                        By submitting, you confirm that all entered details are accurate.
+                    </p>
+
+                    <button type="submit" id="submit-btn" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-brand-600 via-brand-700 to-indigo-700 hover:from-brand-700 hover:to-brand-800 shadow-xl shadow-brand-600/30 hover:shadow-brand-600/40 hover:-translate-y-0.5 transition-all">
+                        <i class="fa-solid fa-paper-plane mr-3"></i> Submit Registration
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-3 sm:p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-8 shadow-2xl border border-slate-100 text-center space-y-5 sm:space-y-6 max-h-[92vh] overflow-y-auto my-auto animate-in fade-in zoom-in duration-200">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto shadow-inner">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-extrabold text-slate-900">Registration Received!</h3>
+                <p class="text-sm text-slate-600 mt-2">
+                    Thank you, <strong id="modal-student-name" class="text-slate-900"></strong>. Your registration for <strong id="modal-student-class" class="text-brand-600"></strong> has been submitted successfully.
+                </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-left space-y-2 text-xs text-slate-600">
+                <div class="flex justify-between">
+                    <span>Unique Student ID:</span>
+                    <span id="modal-unique-id" class="font-mono font-bold text-brand-700">TBA-2026-1001</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Contact Number:</span>
+                    <span id="modal-mobile" class="font-bold text-slate-900"></span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Payment Method:</span>
+                    <span id="modal-payment-method" class="font-bold text-slate-800">bKash</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Transaction ID (TrxID):</span>
+                    <span id="modal-trxid" class="font-mono font-bold text-brand-600"></span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Status:</span>
+                    <span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold">Payment Verification Pending</span>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <a id="modal-check-status-btn" href="status.html" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-receipt"></i>
+                    <span>পেমেন্ট স্ট্যাটাস যাচাই করুন (Check Status)</span>
+                </a>
+                <button id="close-modal-btn" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-colors">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FOOTER SECTION                             -->
+    <!-- ========================================== -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs space-y-2">
+            <p>&copy; 2026 The Brilliant Association, Bogura. All Rights Reserved.</p>
+            <p class="text-slate-500">Helpline: +880 1700-000000 | Email: info@brilliantbogura.org</p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- FIREBASE SDK v10 (APP & FIRESTORE)         -->
+    <!-- ========================================== -->
+    <script type="module">
+        import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { 
+            getFirestore, 
+            doc, 
+            getDoc, 
+            setDoc, 
+            collection,
+            onSnapshot 
+        } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+        // Load custom or default Firebase config
+        let firebaseConfig = {
+            apiKey: "AIzaSyDummyKeyForStudentPortalProject2026",
+            authDomain: "the-brilliant-app.firebaseapp.com",
+            projectId: "the-brilliant-app",
+            storageBucket: "the-brilliant-app.appspot.com",
+            messagingSenderId: "123456789012",
+            appId: "1:123456789012:web:abcdef123456"
+        };
+        try {
+            const stored = localStorage.getItem('tba_firebase_config');
+            if (stored) firebaseConfig = Object.assign(firebaseConfig, JSON.parse(stored));
+        } catch(e){}
+
+        let app, db;
+        try {
+            app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+            db = getFirestore(app);
+        } catch(err) {
+            console.warn("Firebase initialization note (using resilient fallback):", err);
+        }
+
+        window.firebaseApp = app;
+        window.firestoreDb = db;
+        window.doc = doc;
+        window.getDoc = getDoc;
+        window.setDoc = setDoc;
+        window.collection = collection;
+
+        window.dispatchEvent(new CustomEvent('firebase-ready', { detail: { app, db } }));
+    </script>
+
+    <!-- ========================================== -->
+    <!-- DYNAMIC API INTEGRATION & VALIDATION JAVASCRIPT -->
+    <!-- ========================================== -->
+    <script>
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyvgJH9U_1b2ErwgPIFmmqbRlkDjBvHcbh9ie5-IPpCOolWZkwJOe24krlnAtKwHiIKMQ/exec";
+        const GOOGLE_SCRIPT_URL = WEB_APP_URL;
+        window.WEB_APP_URL = WEB_APP_URL;
+        window.GOOGLE_SCRIPT_URL = GOOGLE_SCRIPT_URL;
+
+        // ==============================================================================
+        // MULTI-CHANNEL MFS GATEWAY STATE & DYNAMIC FEE CONFIGURATION
+        // ==============================================================================
+        const DEFAULT_PAYMENT_CONFIG = {
+            fees: {
+                tier1Fee: 180, // Class 4, 5, 6
+                tier2Fee: 200  // Class 7, 8, 9
+            },
+            gateways: {
+                bkash: {
+                    active: true,
+                    name: "bKash",
+                    nameBn: "বিকাশ",
+                    number: "01700-000000",
+                    type: "Personal (Send Money)",
+                    instructions: "বিকাশ অ্যাপ অথবা *247# ডায়াল করে Send Money করুন এবং ১০ ডিজিটের TrxID সংগ্রহ করুন।"
+                },
+                nagad: {
+                    active: true,
+                    name: "Nagad",
+                    nameBn: "নগদ",
+                    number: "01800-000000",
+                    type: "Personal (Send Money)",
+                    instructions: "নগদ অ্যাপ অথবা *167# ডায়াল করে Send Money করুন এবং ৮ ডিজিটের TrxID সংগ্রহ করুন।"
+                },
+                rocket: {
+                    active: true,
+                    name: "Rocket",
+                    nameBn: "রকেট",
+                    number: "01900-0000000",
+                    type: "Personal (Send Money)",
+                    instructions: "রকেট অ্যাপ অথবা *322# ডায়াল করে Send Money করুন এবং TrxID সংগ্রহ করুন।"
+                }
+            }
+        };
+
+        let currentPaymentConfig = JSON.parse(JSON.stringify(DEFAULT_PAYMENT_CONFIG));
+        let selectedGatewayKey = "bkash";
+        let currentSelectedFee = 180;
+
+        // Load cached config instantly from localStorage
+        try {
+            const cachedConfig = localStorage.getItem('tba_payment_config');
+            if (cachedConfig) {
+                const parsed = JSON.parse(cachedConfig);
+                if (parsed && typeof parsed === 'object') {
+                    if (parsed.fees) Object.assign(currentPaymentConfig.fees, parsed.fees);
+                    if (parsed.gateways) {
+                        for (let k in parsed.gateways) {
+                            if (currentPaymentConfig.gateways[k]) {
+                                Object.assign(currentPaymentConfig.gateways[k], parsed.gateways[k]);
+                            } else {
+                                currentPaymentConfig.gateways[k] = parsed.gateways[k];
+                            }
+                        }
+                    }
+                }
+            } else {
+                const legacy = localStorage.getItem('tba_payment_settings');
+                if (legacy) {
+                    const parsedLegacy = JSON.parse(legacy);
+                    if (parsedLegacy.paymentNumber) currentPaymentConfig.gateways.bkash.number = parsedLegacy.paymentNumber;
+                    if (parsedLegacy.tier1Fee !== undefined) currentPaymentConfig.fees.tier1Fee = Number(parsedLegacy.tier1Fee);
+                    if (parsedLegacy.tier2Fee !== undefined) currentPaymentConfig.fees.tier2Fee = Number(parsedLegacy.tier2Fee);
+                }
+            }
+        } catch(e){}
+
+        const GATEWAY_THEMES = {
+            bkash: {
+                name: "bKash",
+                nameBn: "বিকাশ",
+                color: "#e2136e",
+                badgeBg: "bg-[#e2136e]",
+                borderActive: "border-pink-500",
+                bgActive: "bg-pink-50/60",
+                ringActive: "ring-2 ring-pink-500/20",
+                iconText: "b",
+                gradientCard: "bg-gradient-to-br from-pink-50 via-white to-rose-50 border-2 border-pink-400/40",
+                dialCode: "*247#",
+                trxPlaceholder: "e.g. BL9A7K8M92 (10 Characters)"
+            },
+            nagad: {
+                name: "Nagad",
+                nameBn: "নগদ",
+                color: "#f97316",
+                badgeBg: "bg-[#f97316]",
+                borderActive: "border-orange-500",
+                bgActive: "bg-orange-50/60",
+                ringActive: "ring-2 ring-orange-500/20",
+                iconText: "ন",
+                gradientCard: "bg-gradient-to-br from-orange-50 via-white to-amber-50 border-2 border-orange-400/40",
+                dialCode: "*167#",
+                trxPlaceholder: "e.g. 72K9M4X1 (8 Characters)"
+            },
+            rocket: {
+                name: "Rocket",
+                nameBn: "রকেট",
+                color: "#8b5cf6",
+                badgeBg: "bg-[#8b5cf6]",
+                borderActive: "border-purple-600",
+                bgActive: "bg-purple-50/60",
+                ringActive: "ring-2 ring-purple-600/20",
+                iconText: "R",
+                gradientCard: "bg-gradient-to-br from-purple-50 via-white to-indigo-50 border-2 border-purple-400/40",
+                dialCode: "*322#",
+                trxPlaceholder: "e.g. RCK102938 (Transaction ID)"
+            }
+        };
+
+        function selectPaymentGateway(key) {
+            if (!currentPaymentConfig.gateways[key] || currentPaymentConfig.gateways[key].active === false) {
+                const available = Object.keys(currentPaymentConfig.gateways).find(k => currentPaymentConfig.gateways[k].active !== false);
+                if (available) key = available;
+                else key = 'bkash';
+            }
+
+            selectedGatewayKey = key;
+            const gw = currentPaymentConfig.gateways[key] || DEFAULT_PAYMENT_CONFIG.gateways[key];
+            const meta = GATEWAY_THEMES[key] || GATEWAY_THEMES.bkash;
+
+            // Update hidden field for submission
+            const hiddenInp = document.getElementById('selectedPaymentMethod');
+            if (hiddenInp) hiddenInp.value = gw.name || key;
+
+            // Highlight Tab Buttons
+            ['bkash', 'nagad', 'rocket'].forEach(k => {
+                const btn = document.getElementById(`tab-gateway-${k}`);
+                if (!btn) return;
+                const m = GATEWAY_THEMES[k];
+                if (k === key) {
+                    btn.className = `gateway-tab flex flex-col sm:flex-row items-center justify-center gap-2 p-3 sm:p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer shadow-xs ${m.borderActive} ${m.bgActive} ${m.ringActive}`;
+                } else {
+                    btn.className = `gateway-tab flex flex-col sm:flex-row items-center justify-center gap-2 p-3 sm:p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer bg-white border-slate-200 hover:border-slate-300 shadow-xs`;
+                }
+            });
+
+            // Update Card Theme
+            const card = document.getElementById('payment-instruction-card');
+            if (card) {
+                card.className = `p-4 sm:p-6 rounded-2xl ${meta.gradientCard} shadow-md relative overflow-hidden transition-all duration-300`;
+            }
+
+            // Update Icon
+            const iconEl = document.getElementById('payment-gateway-icon');
+            if (iconEl) {
+                iconEl.style.backgroundColor = meta.color;
+                iconEl.textContent = meta.iconText;
+            }
+
+            // Update Title & Account Type
+            const titleEl = document.getElementById('payment-gateway-title');
+            if (titleEl) titleEl.textContent = `${gw.name} Manual Payment Instruction`;
+
+            const typeBadge = document.getElementById('payment-account-type-badge');
+            if (typeBadge) typeBadge.textContent = gw.type || 'Personal (Send Money)';
+
+            // Update Fee Badge Background
+            const feeBadge = document.getElementById('payment-fee-badge');
+            if (feeBadge) feeBadge.style.backgroundColor = meta.color;
+
+            // Update Step Indicators
+            [1, 2, 3].forEach(stepNum => {
+                const sEl = document.getElementById(`step-num-${stepNum}`);
+                if (sEl) sEl.style.backgroundColor = meta.color;
+            });
+
+            // Update Step 1 Action Text
+            const step1 = document.getElementById('step-instruction-1');
+            if (step1) {
+                const actionWord = (gw.type && gw.type.includes('Payment')) ? 'Payment' : 'Send Money';
+                step1.innerHTML = `Open your ${gw.name} App or dial <strong>${meta.dialCode}</strong> and select <strong>${actionWord}</strong>.`;
+            }
+
+            // Update Step 2 Gateway Label and Amount
+            const gwLbl = document.getElementById('step-gateway-label');
+            if (gwLbl) gwLbl.textContent = `${gw.name}`;
+
+            const stepFee = document.getElementById('step-fee-amount');
+            if (stepFee) {
+                stepFee.style.color = meta.color;
+                stepFee.textContent = `${currentSelectedFee} BDT`;
+            }
+
+            // Update Official Receiving Number
+            const numEl = document.getElementById('display-payment-number');
+            if (numEl) numEl.textContent = gw.number || '01700-000000';
+
+            // Update Step 3 Text
+            const step3 = document.getElementById('step-instruction-3');
+            if (step3) {
+                if (gw.instructions) {
+                    step3.innerHTML = `<strong>${gw.name} নির্দেশনা:</strong> ${gw.instructions}`;
+                } else {
+                    step3.innerHTML = `Copy the <strong>TrxID (Transaction ID)</strong> from confirmation SMS and enter it below.`;
+                }
+            }
+
+            // Update Labels & Inputs
+            const senderLbl = document.getElementById('label-sender-number');
+            if (senderLbl) senderLbl.innerHTML = `Sender ${gw.name} Number <span class="text-rose-500">*</span>`;
+
+            const trxLbl = document.getElementById('label-trx-id');
+            if (trxLbl) trxLbl.innerHTML = `${gw.name} Transaction ID (TrxID) <span class="text-rose-500">*</span>`;
+
+            const trxInp = document.getElementById('trxId');
+            if (trxInp) trxInp.placeholder = meta.trxPlaceholder;
+
+            const senderIcon = document.getElementById('sender-icon-box');
+            if (senderIcon) senderIcon.style.color = meta.color;
+
+            const trxIcon = document.getElementById('trx-icon-box');
+            if (trxIcon) trxIcon.style.color = meta.color;
+        }
+        window.selectPaymentGateway = selectPaymentGateway;
+
+        function renderGatewayTabs() {
+            const tabs = ['bkash', 'nagad', 'rocket'];
+            let firstActive = null;
+
+            tabs.forEach(key => {
+                const tabBtn = document.getElementById(`tab-gateway-${key}`);
+                const isEnabled = currentPaymentConfig.gateways[key]?.active !== false;
+
+                if (tabBtn) {
+                    if (isEnabled) {
+                        tabBtn.style.display = '';
+                        if (!firstActive) firstActive = key;
+                    } else {
+                        tabBtn.style.display = 'none';
+                    }
+                }
+            });
+
+            if (currentPaymentConfig.gateways[selectedGatewayKey]?.active === false && firstActive) {
+                selectPaymentGateway(firstActive);
+            } else {
+                selectPaymentGateway(selectedGatewayKey);
+            }
+        }
+
+        function updatePaymentFeeDOM() {
+            const classSelect = document.getElementById('studentClass');
+            const selectedClass = classSelect ? classSelect.value.trim() : '';
+
+            let fee = currentPaymentConfig.fees.tier1Fee; // default 180 BDT
+            let tierName = "Tier 1";
+
+            if (['Class 7', 'Class 8', 'Class 9'].includes(selectedClass)) {
+                fee = currentPaymentConfig.fees.tier2Fee; // 200 BDT
+                tierName = "Tier 2";
+            } else if (['Class 4', 'Class 5', 'Class 6'].includes(selectedClass)) {
+                fee = currentPaymentConfig.fees.tier1Fee; // 180 BDT
+                tierName = "Tier 1";
+            }
+
+            currentSelectedFee = fee;
+
+            const feeDisplay = document.getElementById('display-fee-amount');
+            const feeTierBadge = document.getElementById('display-fee-tier');
+            const stepFee = document.getElementById('step-fee-amount');
+
+            if (feeDisplay) feeDisplay.textContent = fee;
+            if (feeTierBadge) feeTierBadge.textContent = tierName;
+            if (stepFee) stepFee.textContent = `${fee} BDT`;
+
+            const gw = currentPaymentConfig.gateways[selectedGatewayKey];
+            const numEl = document.getElementById('display-payment-number');
+            if (numEl && gw) numEl.textContent = gw.number || '01700-000000';
+
+            const headerFeeText = document.getElementById('header-fee-text');
+            if (headerFeeText) {
+                if (selectedClass) {
+                    headerFeeText.textContent = `${selectedClass} Fee: ${fee} BDT (${tierName})`;
+                } else {
+                    headerFeeText.textContent = `Class 4-6: ${currentPaymentConfig.fees.tier1Fee} BDT | Class 7-9: ${currentPaymentConfig.fees.tier2Fee} BDT`;
+                }
+            }
+        }
+        window.updatePaymentFeeDOM = updatePaymentFeeDOM;
+
+        async function fetchPaymentSettingsFromFirestore() {
+            try {
+                if (window.firestoreDb && window.doc && window.getDoc) {
+                    // 1. Try modern multi-gateway config
+                    const docRef = window.doc(window.firestoreDb, "settings", "paymentConfig");
+                    const snap = await window.getDoc(docRef);
+                    if (snap && snap.exists()) {
+                        const data = snap.data();
+                        if (data && typeof data === 'object') {
+                            if (data.fees) Object.assign(currentPaymentConfig.fees, data.fees);
+                            if (data.gateways) {
+                                for (let k in data.gateways) {
+                                    if (currentPaymentConfig.gateways[k]) {
+                                        Object.assign(currentPaymentConfig.gateways[k], data.gateways[k]);
+                                    } else {
+                                        currentPaymentConfig.gateways[k] = data.gateways[k];
+                                    }
+                                }
+                            }
+                            localStorage.setItem('tba_payment_config', JSON.stringify(currentPaymentConfig));
+                            renderGatewayTabs();
+                            updatePaymentFeeDOM();
+                            return;
+                        }
+                    }
+
+                    // 2. Fallback to legacy paymentOptions
+                    const legacyRef = window.doc(window.firestoreDb, "settings", "paymentOptions");
+                    const legacySnap = await window.getDoc(legacyRef);
+                    if (legacySnap && legacySnap.exists()) {
+                        const data = legacySnap.data();
+                        if (data.paymentNumber) currentPaymentConfig.gateways.bkash.number = data.paymentNumber;
+                        if (data.tier1Fee !== undefined) currentPaymentConfig.fees.tier1Fee = Number(data.tier1Fee) || 180;
+                        if (data.tier2Fee !== undefined) currentPaymentConfig.fees.tier2Fee = Number(data.tier2Fee) || 200;
+
+                        localStorage.setItem('tba_payment_config', JSON.stringify(currentPaymentConfig));
+                        renderGatewayTabs();
+                        updatePaymentFeeDOM();
+                    }
+                }
+            } catch(e) {
+                console.warn("Firestore payment options fetch warning, using local defaults:", e);
+            }
+        }
+
+        window.addEventListener('firebase-ready', fetchPaymentSettingsFromFirestore);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Apply payment UI values on load
+            renderGatewayTabs();
+            updatePaymentFeeDOM();
+            setTimeout(fetchPaymentSettingsFromFirestore, 400);
+
+            // Class dropdown change event listener for dynamic fees
+            const classSelect = document.getElementById('studentClass');
+            if (classSelect) {
+                classSelect.addEventListener('change', () => {
+                    updatePaymentFeeDOM();
+                    selectPaymentGateway(selectedGatewayKey);
+                });
+            }
+            
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                const toggleMenu = () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (menuIcon) {
+                            menuIcon.classList.remove('fa-bars');
+                            menuIcon.classList.add('fa-xmark');
+                        }
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (menuIcon) {
+                            menuIcon.classList.remove('fa-xmark');
+                            menuIcon.classList.add('fa-bars');
+                        }
+                    }
+                };
+
+                menuBtn.addEventListener('click', toggleMenu);
+
+                // Auto-close menu when tapping any navigation link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        if (menuIcon) {
+                            menuIcon.classList.remove('fa-xmark');
+                            menuIcon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Auto-populate cached schools from localStorage for zero-latency autocomplete
+            try {
+                const cachedSchools = JSON.parse(localStorage.getItem('tba_schools_cache') || '[]');
+                const datalist = document.getElementById('school-datalist');
+                if (datalist && Array.isArray(cachedSchools) && cachedSchools.length > 0) {
+                    datalist.innerHTML = cachedSchools.map(s => `<option value="${s}"></option>`).join('');
+                }
+            } catch(e) {}
+
+            // Student Photo File Upload & Client-side Validation (Max 2MB)
+            window.currentStudentPhotoBase64 = "";
+            const photoInput = document.getElementById('studentPhoto');
+            const photoPreview = document.getElementById('photo-preview-img');
+            const photoPlaceholder = document.getElementById('photo-placeholder');
+            const photoRemoveBtn = document.getElementById('photo-remove-btn');
+            const photoStatusText = document.getElementById('photo-status-text');
+
+            if (photoInput) {
+                photoInput.addEventListener('change', function(e) {
+                    const file = e.target.files && e.target.files[0];
+                    if (!file) return;
+
+                    // Size limit check: 2MB max
+                    const MAX_SIZE = 2 * 1024 * 1024;
+                    if (file.size > MAX_SIZE) {
+                        alert("⚠️ File size exceeds 2MB limit! Please upload a photo under 2MB.\n(ছবির আকার সর্বোচ্চ ২ মেগাবাইট হতে হবে)");
+                        this.value = "";
+                        removeStudentPhoto();
+                        return;
+                    }
+
+                    const reader = new FileReader();
+                    reader.onload = function(evt) {
+                        const img = new Image();
+                        img.onload = function() {
+                            // Scale/compress image to lightweight dimensions (max 250px, quality 0.7, < 35KB)
+                            const canvas = document.createElement('canvas');
+                            const MAX_DIM = 250;
+                            let width = img.width;
+                            let height = img.height;
+
+                            if (width > height) {
+                                if (width > MAX_DIM) {
+                                    height = Math.round(height * (MAX_DIM / width));
+                                    width = MAX_DIM;
+                                }
+                            } else {
+                                if (height > MAX_DIM) {
+                                    width = Math.round(width * (MAX_DIM / height));
+                                    height = MAX_DIM;
+                                }
+                            }
+                            canvas.width = width;
+                            canvas.height = height;
+                            const ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0, width, height);
+
+                            const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
+                            window.currentStudentPhotoBase64 = compressedBase64;
+
+                            if (photoPreview) {
+                                photoPreview.src = compressedBase64;
+                                photoPreview.classList.remove('hidden');
+                            }
+                            if (photoPlaceholder) photoPlaceholder.classList.add('hidden');
+                            if (photoRemoveBtn) photoRemoveBtn.classList.remove('hidden');
+                            if (photoStatusText) {
+                                const approxKb = Math.round((compressedBase64.length * 3 / 4) / 1024);
+                                photoStatusText.textContent = `${file.name} (Optimized: ${approxKb} KB)`;
+                                photoStatusText.className = "text-xs text-emerald-600 font-semibold";
+                            }
+                        };
+                        img.src = evt.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+
+            window.removeStudentPhoto = function() {
+                window.currentStudentPhotoBase64 = "";
+                const pInput = document.getElementById('studentPhoto');
+                if (pInput) pInput.value = "";
+                const pPreview = document.getElementById('photo-preview-img');
+                const pPlaceholder = document.getElementById('photo-placeholder');
+                const pRemoveBtn = document.getElementById('photo-remove-btn');
+                const pStatusText = document.getElementById('photo-status-text');
+                if (pPreview) {
+                    pPreview.src = "";
+                    pPreview.classList.add('hidden');
+                }
+                if (pPlaceholder) pPlaceholder.classList.remove('hidden');
+                if (pRemoveBtn) pRemoveBtn.classList.add('hidden');
+                if (pStatusText) {
+                    pStatusText.textContent = "No photo chosen";
+                    pStatusText.className = "text-xs text-slate-400 font-medium italic";
+                }
+            };
+
+            // ==========================================
+            // STRICT PRE-SUBMIT FORM VALIDATION GUARD
+            // ==========================================
+            const studentRegForm = document.getElementById('studentRegistrationForm') || document.getElementById('registrationForm');
+            
+            if (studentRegForm) {
+                studentRegForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // 1. Mandatory Text Fields Check
+                    const requiredIds = [
+                        { id: 'studentNameBangla', label: 'শিক্ষার্থীর নাম (বাংলা)' },
+                        { id: 'studentNameEnglish', label: 'শিক্ষার্থীর নাম (ইংরেজি)' },
+                        { id: 'fatherName', label: 'পিতার নাম' },
+                        { id: 'studentClass', label: 'শ্রেণি' },
+                        { id: 'schoolName', label: 'শিক্ষা প্রতিষ্ঠানের নাম' },
+                        { id: 'mobileNumber', label: 'মোবাইল নম্বর' },
+                        { id: 'examCenter', label: 'পরীক্ষা কেন্দ্র' },
+                        { id: 'senderNumber', label: 'পেমেন্ট প্রেরক নম্বর (Sender Mobile Number)' },
+                        { id: 'trxId', label: 'ট্রানজেকশন আইডি (Transaction ID / TrxID)' }
+                    ];
+
+                    for (let field of requiredIds) {
+                        const el = document.getElementById(field.id);
+                        if (!el || !el.value.trim()) {
+                            alert(`অনুগ্রহ করে "${field.label}" সঠিকভাবে পূরণ করুন!`);
+                            el?.focus();
+                            return false;
+                        }
+                    }
+
+                    // 2. Mobile Number Format Check (11 Digits BD Regex)
+                    const phoneVal = document.getElementById('mobileNumber').value.trim();
+                    if (!/^01[3-9]\d{8}$/.test(phoneVal)) {
+                        alert('সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন (যেমন: 017XXXXXXXX)');
+                        document.getElementById('mobileNumber').focus();
+                        return false;
+                    }
+
+                    // 3. Mandatory Student Photo File Check
+                    const photoInput = document.getElementById('studentPhoto');
+                    if (!photoInput || !photoInput.files || photoInput.files.length === 0) {
+                        alert('শিক্ষার্থীর পাসপোর্ট সাইজের ছবি অবশ্যই আপলোড করতে হবে!');
+                        photoInput?.focus();
+                        return false;
+                    }
+
+                    // 4. File Size Check (e.g., Max 2MB)
+                    const file = photoInput.files[0];
+                    if (file.size > 2 * 1024 * 1024) {
+                        alert('ছবির সাইজ ২ মেগাবাইট (2MB)-এর কম হতে হবে!');
+                        return false;
+                    }
+
+                    // If all validations pass, proceed to submit form data to backend
+                    submitRegistrationForm();
+                });
+            }
+
+            // ==========================================
+            // BACKEND FORM SUBMISSION & SUCCESS MODAL
+            // ==========================================
+            function showRegistrationSuccessModal(payload) {
+                const successModal = document.getElementById('success-modal');
+                if (successModal) {
+                    const modalName = document.getElementById('modal-student-name');
+                    const modalClass = document.getElementById('modal-student-class');
+                    const modalUniqueId = document.getElementById('modal-unique-id');
+                    const modalMobile = document.getElementById('modal-mobile');
+                    const modalMethod = document.getElementById('modal-payment-method');
+                    const modalTrxId = document.getElementById('modal-trxid');
+
+                    if (modalName) modalName.textContent = payload.studentName || payload.name;
+                    if (modalClass) modalClass.textContent = payload.studentClass || payload.class;
+                    if (modalUniqueId) modalUniqueId.textContent = payload.uniqueId || payload.id;
+                    if (modalMobile) modalMobile.textContent = payload.mobileNumber || payload.mobile;
+                    if (modalMethod) modalMethod.textContent = payload.paymentMethod || 'bKash';
+                    if (modalTrxId) modalTrxId.textContent = payload.trxId;
+
+                    // Link to status checker with pre-filled student ID
+                    const modalStatusBtn = document.getElementById('modal-check-status-btn');
+                    if (modalStatusBtn && (payload.uniqueId || payload.id)) {
+                        modalStatusBtn.href = `status.html?id=${encodeURIComponent(payload.uniqueId || payload.id)}`;
+                    }
+
+                    successModal.classList.remove('hidden');
+                } else {
+                    alert("Registration Successful!\nYour Unique ID: " + (payload.uniqueId || payload.id));
+                }
+
+                const regForm = document.getElementById('studentRegistrationForm') || document.getElementById('registrationForm');
+                if (regForm) regForm.reset();
+                if (typeof removeStudentPhoto === 'function') removeStudentPhoto();
+                if (typeof renderGatewayTabs === 'function') renderGatewayTabs();
+                if (typeof updatePaymentFeeDOM === 'function') updatePaymentFeeDOM();
+
+                const submitBtn = document.getElementById('submit-btn');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = submitBtn.dataset.originalText || `<i class="fa-solid fa-paper-plane mr-3"></i> Submit Registration`;
+                }
+            }
+
+            async function submitRegistrationFormFast(payload) {
+                // 1. Instant local persistence & Broadcast to open Admin tabs (0ms latency)
+                try {
+                    const pendingList = JSON.parse(localStorage.getItem('tba_students')) || [];
+                    pendingList.unshift(payload); // Place on top of the list
+                    localStorage.setItem('tba_students', JSON.stringify(pendingList));
+
+                    // Broadcast to Admin Panel across tabs in 0 milliseconds
+                    if ('BroadcastChannel' in window) {
+                        const bc = new BroadcastChannel('tba_system_channel');
+                        bc.postMessage({ type: 'NEW_REGISTRATION', student: payload });
+                    }
+                } catch(e) {
+                    console.warn('Local broadcast fallback', e);
+                }
+
+                // 2. Immediate Success Feedback (Do not make the student wait 10 seconds!)
+                showRegistrationSuccessModal(payload);
+
+                // 3. Non-blocking asynchronous sync to Google Sheets backend
+                const scriptUrl = typeof GOOGLE_SCRIPT_URL !== 'undefined' ? GOOGLE_SCRIPT_URL : WEB_APP_URL;
+                fetch(scriptUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify({ action: 'registerStudent', ...payload })
+                }).catch(err => console.error('Background sheet sync error:', err));
+
+                // 4. Non-blocking asynchronous sync to Firestore if connected
+                try {
+                    if (window.firestoreDb && window.doc && window.setDoc && (payload.uniqueId || payload.id)) {
+                        const studentDocRef = window.doc(window.firestoreDb, "students", payload.uniqueId || payload.id);
+                        window.setDoc(studentDocRef, {
+                            ...payload,
+                            registeredAt: new Date().toISOString()
+                        }, { merge: true }).catch(err => console.warn("Firestore background sync note:", err));
+                    }
+                } catch(fsErr) {}
+            }
+
+            async function submitRegistrationForm() {
+                const regForm = document.getElementById('studentRegistrationForm') || document.getElementById('registrationForm');
+                if (!regForm) return;
+
+                const submitBtn = regForm.querySelector('button[type="submit"]') || document.getElementById('submit-btn');
+                if (submitBtn) {
+                    submitBtn.dataset.originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-3 text-lg"></i> Submitting...`;
+                    submitBtn.disabled = true;
+                }
+
+                // Automatically extract all form fields using FormData
+                const formData = new FormData(regForm);
+                const dataObj = Object.fromEntries(formData.entries());
+
+                // Accurately capture all form input fields by ID with safe fallbacks
+                const studentName = (document.getElementById('studentNameEnglish')?.value || document.getElementById('studentName')?.value || dataObj.studentNameEnglish || dataObj.studentName || dataObj.name || "").trim();
+                const bengaliName = (document.getElementById('studentNameBangla')?.value || document.getElementById('bengaliName')?.value || dataObj.studentNameBangla || dataObj.bengaliName || "").trim();
+                const fatherEnglish = (document.getElementById('fatherName')?.value || dataObj.fatherName || dataObj.fatherEnglish || dataObj.father || "").trim();
+                const fatherBengali = (document.getElementById('fatherBengali')?.value || dataObj.fatherBengali || "").trim();
+                const motherEnglish = (document.getElementById('motherName')?.value || dataObj.motherName || dataObj.motherEnglish || dataObj.mother || "").trim();
+                const motherBengali = (document.getElementById('motherBengali')?.value || dataObj.motherBengali || "").trim();
+                const studentClass = (document.getElementById('studentClass')?.value || dataObj.studentClass || dataObj.class || "").trim();
+                const institutionType = (document.getElementById('institutionType')?.value || dataObj.institutionType || "School").trim();
+                const schoolEnglish = (document.getElementById('schoolName')?.value || dataObj.schoolName || dataObj.schoolEnglish || dataObj.school || "").trim();
+                const schoolBengali = (document.getElementById('schoolBengali')?.value || dataObj.schoolBengali || "").trim();
+                const examCenter = (document.getElementById('examCenter')?.value || dataObj.examCenter || dataObj.center || "Adamdighi").trim();
+                const mobileNumber = (document.getElementById('mobileNumber')?.value || dataObj.mobileNumber || "").trim();
+                const trxId = (document.getElementById('trxId')?.value || document.getElementById('bkashTrxId')?.value || dataObj.trxId || "").trim().toUpperCase();
+                const senderNumber = (document.getElementById('senderNumber')?.value || document.getElementById('bkashSender')?.value || dataObj.senderNumber || mobileNumber).trim();
+                const village = (document.getElementById('village')?.value || dataObj.village || dataObj.area || "").trim();
+                const union = (document.getElementById('union')?.value || dataObj.union || "").trim();
+                const upazila = (document.getElementById('upazila')?.value || dataObj.upazila || "").trim();
+                const district = (document.getElementById('district')?.value || dataObj.district || "Bogura").trim();
+                const photoUrl = window.currentStudentPhotoBase64 || "";
+
+                // Pre-generate standard client-side registration ID
+                const uniqueId = "TBA-2026-" + Math.floor(1000 + Math.random() * 9000);
+
+                // Calculate Center Code (01-08) for the 8 official centers
+                const CENTER_CODE_MAP = {
+                    'adamdighi': '01',
+                    'dupchanchia': '02',
+                    'kahalu': '03',
+                    'nandigram': '04',
+                    'mahasthangarh': '05',
+                    'mahasthan': '05',
+                    'shibganj': '06',
+                    'mokamtola': '07',
+                    'pirgacha': '08'
+                };
+                const centerKey = (examCenter || '').toLowerCase().trim();
+                let centerCode = '01';
+                for (const [cKey, cVal] of Object.entries(CENTER_CODE_MAP)) {
+                    if (centerKey.includes(cKey)) {
+                        centerCode = cVal;
+                        break;
+                    }
+                }
+
+                // Update cached schools in localStorage
+                if (schoolEnglish) {
+                    try {
+                        const cachedSchools = JSON.parse(localStorage.getItem('tba_schools_cache') || '[]');
+                        if (!cachedSchools.includes(schoolEnglish)) {
+                            cachedSchools.push(schoolEnglish);
+                            localStorage.setItem('tba_schools_cache', JSON.stringify(cachedSchools.sort()));
+                        }
+                    } catch(e) {}
+                }
+
+                // Payload with exact keys required for backend
+                const payload = {
+                    action: "registerStudent",
+                    uniqueId: uniqueId,
+                    id: uniqueId,
+                    studentId: uniqueId,
+                    studentName: studentName,
+                    name: studentName,
+                    englishName: studentName,
+                    engName: studentName,
+                    bengaliName: bengaliName,
+                    banName: bengaliName,
+                    banglaName: bengaliName,
+                    fatherName: fatherEnglish,
+                    fatherEnglish: fatherEnglish,
+                    fatherBengali: fatherBengali,
+                    father: fatherEnglish,
+                    motherName: motherEnglish,
+                    motherEnglish: motherEnglish,
+                    motherBengali: motherBengali,
+                    mother: motherEnglish,
+                    studentClass: studentClass,
+                    class: studentClass,
+                    institutionType: institutionType,
+                    schoolName: schoolEnglish,
+                    school: schoolEnglish,
+                    schoolEnglish: schoolEnglish,
+                    schoolBengali: schoolBengali,
+                    photoUrl: photoUrl,
+                    photo: photoUrl,
+                    examCenter: examCenter,
+                    center: examCenter,
+                    centerCode: centerCode,
+                    mobileNumber: mobileNumber,
+                    mobile: mobileNumber,
+                    phone: mobileNumber,
+                    paymentMethod: (document.getElementById('selectedPaymentMethod')?.value || 'bKash'),
+                    payment_method: (document.getElementById('selectedPaymentMethod')?.value || 'bKash'),
+                    trxId: trxId,
+                    senderNumber: senderNumber,
+                    village: village,
+                    union: union,
+                    upazila: upazila,
+                    district: district,
+                    feeAmount: currentSelectedFee,
+                    paymentNumber: (currentPaymentConfig.gateways[selectedGatewayKey]?.number || '01700-000000'),
+                    area: village,
+                    status: "Pending",
+                    date: new Date().toISOString().split('T')[0],
+                    registeredAt: new Date().toISOString()
+                };
+
+                await submitRegistrationFormFast(payload);
+            }
+
+            // Close modal button handler
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const successModal = document.getElementById('success-modal');
+            if (closeModalBtn && successModal) {
+                closeModalBtn.addEventListener('click', () => {
+                    successModal.classList.add('hidden');
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+
+        // Secret Keyboard Shortcut for Admin Access: Ctrl + Shift + A or Cmd + Shift + A
+        window.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+                e.preventDefault();
+                window.location.href = 'admin.html';
+            }
+        });
+    </script>
+</body>
+</html>

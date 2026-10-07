@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal & Result | The Brilliant Association, Bogura</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        @media print {
+            nav, footer, .search-container, .print-hide {
+                display: none !important;
+            }
+            .printable-card {
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION BAR                             -->
+    <!-- ========================================== -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo & Name -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-lg font-bold text-slate-900 leading-tight">The Brilliant Association</span>
+                        <span class="block text-xs font-semibold text-brand-600 tracking-wider uppercase">Bogura, Bangladesh</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Home</a>
+                    <a href="index.html#notice" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Notice</a>
+                    <a href="registration.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Registration</a>
+                    <a href="result.html" class="text-sm font-semibold text-brand-600 transition-colors">Result Portal</a>
+                    <a href="status.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Payment Status</a>
+                </div>
+
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Home</a>
+            <a href="index.html#notice" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Notice</a>
+            <a href="registration.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Registration</a>
+            <a href="result.html" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-600 bg-brand-50">Result Portal</a>
+            <a href="status.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Payment Status</a>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- MAIN CONTENT AREA                          -->
+    <!-- ========================================== -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full flex-grow space-y-10">
+        
+        <!-- Header Title Banner -->
+        <div class="text-center space-y-3">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-award"></i> Examination Portal 2026
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Check Scholarship Result</h1>
+            <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+                Enter your <strong>Student Roll Number</strong> or <strong>Unique Registration ID</strong> to search your examination score and merit position.
+            </p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SEARCH BOX SECTION                         -->
+        <!-- ========================================== -->
+        <div class="search-container bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl max-w-2xl mx-auto">
+            <form id="search-form" class="space-y-4" novalidate>
+                <label for="searchQuery" class="block text-sm font-bold text-slate-700">
+                    Student Roll Number / Unique ID <span class="text-rose-500">*</span>
+                </label>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="relative flex-grow">
+                        <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-id-card text-base"></i>
+                        </span>
+                        <input type="text" id="searchQuery" name="searchQuery" required
+                            placeholder="e.g. 1001 অথবা TBA-2026-XXXX"
+                            class="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-base focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                    </div>
+                    
+                    <button type="submit" id="search-btn" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-extrabold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 rounded-xl shadow-md shadow-brand-600/30 hover:shadow-brand-600/40 hover:-translate-y-0.5 transition-all cursor-pointer">
+                        <i class="fa-solid fa-magnifying-glass mr-2 text-sm" id="search-icon"></i>
+                        <span>Search Result</span>
+                    </button>
+                </div>
+                
+                <!-- Live Search Help -->
+                <div class="pt-1 text-xs text-slate-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-info text-brand-600"></i>
+                    <span>আপনার রোল নম্বর (Roll No) অথবা স্টুডেন্ট আইডি (Student ID) দিয়ে ফলাফল অনুসন্ধান করুন।</span>
+                </div>
+
+                <p id="search-error" class="text-xs text-rose-500 hidden pt-1"></p>
+            </form>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="hidden text-center py-8">
+            <div class="inline-block w-10 h-10 border-4 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
+            <p class="text-xs font-semibold text-slate-500 mt-3">Searching examination database...</p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- NOT FOUND ALERT CARD                       -->
+        <!-- ========================================== -->
+        <div id="not-found-card" class="hidden max-w-2xl mx-auto p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-center space-y-3">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xl mx-auto">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Result Not Found</h3>
+            <p class="text-sm text-slate-600 max-w-md mx-auto">
+                We couldn't find any student result associated with Roll / ID <strong id="not-found-id" class="font-mono text-slate-900"></strong>. Please verify the entered ID or contact support.
+            </p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- RESULT DISPLAY CONTAINER (DYNAMIC CARD)    -->
+        <!-- ========================================== -->
+        <div id="resultDisplayContainer" class="hidden transition-all"></div>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- FOOTER SECTION                             -->
+    <!-- ========================================== -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs space-y-2">
+            <p>&copy; 2026 The Brilliant Association, Bogura. All Rights Reserved.</p>
+            <p class="text-slate-500">Helpline: +880 1700-000000 | Email: info@brilliantbogura.org</p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT FOR RESULT SEARCH               -->
+    <!-- ========================================== -->
+    <script>
+        // Global Backend API URL Configuration
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyvgJH9U_1b2ErwgPIFmmqbRlkDjBvHcbh9ie5-IPpCOolWZkwJOe24krlnAtKwHiIKMQ/exec";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-xmark');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
+
+            // Elements
+            const searchForm = document.getElementById('search-form');
+            const searchQueryInput = document.getElementById('searchQuery');
+            const searchError = document.getElementById('search-error');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const notFoundCard = document.getElementById('not-found-card');
+            const notFoundId = document.getElementById('not-found-id');
+            const resultContainer = document.getElementById('resultDisplayContainer');
+
+            // Form Submit Handler
+            if (searchForm) {
+                searchForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const query = searchQueryInput.value.trim();
+                    if (!query) {
+                        searchError.textContent = "Please enter a Roll Number or Student ID.";
+                        searchError.classList.remove('hidden');
+                        return;
+                    }
+                    searchError.classList.add('hidden');
+                    performSearch(query);
+                });
+            }
+
+            // URL parameter auto-search on page load (?roll=1001 or ?id=TBA-2026-XXXX)
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialQuery = urlParams.get('roll') || urlParams.get('id') || urlParams.get('query');
+            if (initialQuery && searchQueryInput) {
+                searchQueryInput.value = initialQuery;
+                performSearch(initialQuery);
+            }
+
+            // Perform Search Logic (Strictly Live Dataset Only - Zero Mock / Fake Records)
+            async function performSearch(query) {
+                if (resultContainer) {
+                    resultContainer.classList.add('hidden');
+                    resultContainer.innerHTML = '';
+                }
+                if (notFoundCard) notFoundCard.classList.add('hidden');
+                if (loadingSpinner) loadingSpinner.classList.remove('hidden');
+
+                const cleanQuery = String(query).trim().toLowerCase();
+
+                // 1. Search Live Unified Local Dataset ('tba_students' in localStorage)
+                let localStudents = [];
+                try {
+                    localStudents = JSON.parse(localStorage.getItem('tba_students')) || [];
+                } catch(e) {
+                    localStudents = [];
+                }
+
+                const localMatch = localStudents.find(s => {
+                    if (!s) return false;
+                    const sId = String(s.uniqueId || s.id || s.studentId || s.regId || '').trim().toLowerCase();
+                    const sRoll = String(s.rollNumber || s.rollNo || s.roll || '').trim().toLowerCase();
+                    const sMobile = String(s.mobileNumber || s.mobile || s.phone || '').trim().toLowerCase();
+                    return (sId && sId === cleanQuery) || (sRoll && sRoll === cleanQuery) || (sMobile && sMobile === cleanQuery);
+                });
+
+                if (localMatch) {
+                    if (loadingSpinner) loadingSpinner.classList.add('hidden');
+                    handleSearchResult(localMatch);
+                    return;
+                }
+
+                // 2. Query Backend Google Sheets Web App Endpoint
+                if (typeof WEB_APP_URL !== 'undefined' && WEB_APP_URL && WEB_APP_URL.trim() !== "" && !WEB_APP_URL.includes("YOUR_WEB_APP_URL_HERE")) {
+                    try {
+                        const response = await fetch(`${WEB_APP_URL}?action=getResult&studentId=${encodeURIComponent(query)}&t=${Date.now()}`);
+                        const data = await response.json();
+
+                        if (loadingSpinner) loadingSpinner.classList.add('hidden');
+
+                        if (data && (data.success || data.status === 'success')) {
+                            const student = {
+                                uniqueId: data.uniqueId || data.id || query,
+                                rollNo: data.rollNumber || data.rollNo || data.roll || '',
+                                rollNumber: data.rollNumber || data.rollNo || data.roll || '',
+                                nameEnglish: data.name || data.nameEnglish || data.studentName || '',
+                                nameBangla: data.bengaliName || data.nameBangla || '',
+                                studentClass: data.studentClass || data.class || '',
+                                schoolNameEnglish: data.schoolName || data.school || '',
+                                scholarshipGrade: (data.scholarshipGrade || data.position || data.awardCategory || '').trim()
+                            };
+                            handleSearchResult(student);
+                            return;
+                        } else {
+                            showResultNotFound(query, data && data.error ? data.error : null);
+                            return;
+                        }
+                    } catch (err) {
+                        console.warn("Backend fetch error:", err);
+                        if (loadingSpinner) loadingSpinner.classList.add('hidden');
+                        showResultNotFound(query);
+                        return;
+                    }
+                }
+
+                if (loadingSpinner) loadingSpinner.classList.add('hidden');
+                showResultNotFound(query);
+            }
+
+            // Strict Award Qualification Check (No Accidental Defaults)
+            function handleSearchResult(student) {
+                if (!student) {
+                    showResultNotFound();
+                    return;
+                }
+
+                // Normalize and trim the award string
+                const rawGrade = (student.scholarshipGrade || student.position || student.awardCategory || '').trim();
+                const normalizedGrade = rawGrade.toLowerCase();
+
+                // A student is ONLY qualified if explicitly awarded one of the valid tiers:
+                const validAwards = ['talentpool', 'general', 'quota', 'shubhechcha', 'first division'];
+                const isWinner = validAwards.includes(normalizedGrade);
+
+                if (isWinner) {
+                    // Display QUALIFIED card with their exact award title (Talentpool / General / Quota / Shubhechcha)
+                    renderQualifiedResultCard(student, rawGrade);
+                } else {
+                    // Must display NOT QUALIFIED card (No marks shown)
+                    renderNotQualifiedResultCard(student);
+                }
+            }
+
+            // Render Celebratory Qualified Result Card (Zero Raw Marks Displayed)
+            function renderQualifiedResultCard(student, rawGrade) {
+                if (!resultContainer) return;
+
+                const displayName = student.nameEnglish || student.nameBangla || student.studentName || student.name || 'Student Name';
+                const displayClass = student.studentClass || student.class || '—';
+                const displayRoll = student.rollNo || student.rollNumber || student.roll || student.uniqueId || '—';
+                const displaySchool = student.schoolNameEnglish || student.schoolName || student.school || '';
+
+                resultContainer.innerHTML = `
+                    <div class="printable-card bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 max-w-xl mx-auto animate-in fade-in zoom-in duration-150">
+                        <!-- Card Header -->
+                        <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-6 text-white flex justify-between items-center">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-white/80 font-medium">OFFICIAL RESULT</span>
+                                <h2 class="text-xl font-bold mt-1">${displayName}</h2>
+                            </div>
+                            <span class="px-3.5 py-1 text-xs font-extrabold rounded-full bg-emerald-500 text-white shadow-sm flex items-center gap-1.5">
+                                <i class="fa-solid fa-medal"></i> QUALIFIED
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6 space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="text-xs text-slate-500 font-medium">শ্রেণি (Class)</span>
+                                    <div class="text-base font-bold text-slate-800 mt-0.5">${displayClass}</div>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="text-xs text-slate-500 font-medium">রোল নম্বর (Roll No)</span>
+                                    <div class="text-base font-bold text-slate-800 mt-0.5 font-mono">${displayRoll}</div>
+                                </div>
+                            </div>
+
+                            ${displaySchool ? `
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="text-xs text-slate-500 font-medium">শিক্ষা প্রতিষ্ঠান (Institution)</span>
+                                    <div class="text-sm font-semibold text-slate-700 mt-0.5">${displaySchool}</div>
+                                </div>
+                            ` : ''}
+
+                            <!-- Merit / Scholarship Result Box (Zero Marks Shown) -->
+                            <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
+                                <span class="text-xs uppercase font-medium text-amber-700 tracking-wider">অর্জিত বৃত্তির ক্যাটাগরি (Merit Position)</span>
+                                <div class="text-lg font-bold text-amber-800 mt-1 flex items-center gap-2">
+                                    🎖️ ${rawGrade}
+                                </div>
+                            </div>
+
+                            <!-- Status Notice -->
+                            <div class="mt-4 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm flex items-center gap-2.5 font-medium leading-relaxed">
+                                <span>🎉 অভিনন্দন! মেধা মূল্যায়নের ভিত্তিতে শিক্ষার্থী <strong>${rawGrade}</strong> বৃত্তি অর্জনে সক্ষম হয়েছে।</span>
+                            </div>
+
+                            <!-- Print Action Button -->
+                            <div class="pt-2 flex justify-center print-hide">
+                                <button type="button" onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 shadow-md cursor-pointer transition-all hover:scale-105 active:scale-95">
+                                    <i class="fa-solid fa-print"></i> ফলাফল মুদ্রণ করুন (Print Result)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                resultContainer.classList.remove('hidden');
+                resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Render Respectful Motivational Not Qualified Result Card (Zero Raw Marks Displayed)
+            function renderNotQualifiedResultCard(student) {
+                if (!resultContainer) return;
+
+                const displayName = student.nameEnglish || student.nameBangla || student.studentName || student.name || 'Student Name';
+                const displayClass = student.studentClass || student.class || '—';
+                const displayRoll = student.rollNo || student.rollNumber || student.roll || student.uniqueId || '—';
+                const displaySchool = student.schoolNameEnglish || student.schoolName || student.school || '';
+
+                resultContainer.innerHTML = `
+                    <div class="printable-card bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 max-w-xl mx-auto animate-in fade-in zoom-in duration-150">
+                        <!-- Card Header -->
+                        <div class="bg-gradient-to-r from-slate-700 to-slate-800 p-6 text-white flex justify-between items-center">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-white/80 font-medium">OFFICIAL RESULT</span>
+                                <h2 class="text-xl font-bold mt-1">${displayName}</h2>
+                            </div>
+                            <span class="px-3.5 py-1 text-xs font-semibold rounded-full bg-slate-500 text-white shadow-sm flex items-center gap-1.5">
+                                <i class="fa-solid fa-circle-info"></i> NOT QUALIFIED
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6 space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="text-xs text-slate-500 font-medium">শ্রেণি (Class)</span>
+                                    <div class="text-base font-bold text-slate-800 mt-0.5">${displayClass}</div>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="text-xs text-slate-500 font-medium">রোল নম্বর (Roll No)</span>
+                                    <div class="text-base font-bold text-slate-800 mt-0.5 font-mono">${displayRoll}</div>
+                                </div>
+                            </div>
+
+                            ${displaySchool ? `
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="text-xs text-slate-500 font-medium">শিক্ষা প্রতিষ্ঠান (Institution)</span>
+                                    <div class="text-sm font-semibold text-slate-700 mt-0.5">${displaySchool}</div>
+                                </div>
+                            ` : ''}
+
+                            <!-- Merit / Scholarship Result Box (Zero Marks Shown) -->
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <span class="text-xs uppercase font-medium text-slate-500 tracking-wider">ফলাফল মূল্যায়ন স্ট্যাটাস</span>
+                                <div class="text-base font-semibold text-slate-700 mt-1">
+                                    বৃত্তি তালিকায় স্থান পায়নি (Not Qualified)
+                                </div>
+                            </div>
+
+                            <!-- Status Notice -->
+                            <div class="mt-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm leading-relaxed">
+                                <div class="font-bold flex items-center gap-2 mb-1 text-amber-950">
+                                    <span>📌 ফলাফল বিজ্ঞপ্তি:</span>
+                                </div>
+                                মেধাতালিকার নির্ধারিত কাট-অফ স্কোরের ভিত্তিতে পরীক্ষার্থী এবারের বৃত্তিপ্রাপ্তদের তালিকায় স্থান অর্জন করতে পারেনি। দি ব্রিলিয়ান্ট এসোসিয়েশন এর পক্ষ থেকে শিক্ষার্থীর ভবিষ্যৎ পথচলার জন্য শুভকামনা রইল।
+                            </div>
+
+                            <!-- Print Action Button -->
+                            <div class="pt-2 flex justify-center print-hide">
+                                <button type="button" onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 shadow-md cursor-pointer transition-all hover:scale-105 active:scale-95">
+                                    <i class="fa-solid fa-print"></i> ফলাফল মুদ্রণ করুন (Print Result)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                resultContainer.classList.remove('hidden');
+                resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Show Result Not Found Alert
+            function showResultNotFound(query, customMsg) {
+                if (resultContainer) {
+                    resultContainer.classList.add('hidden');
+                    resultContainer.innerHTML = '';
+                }
+                if (notFoundId) {
+                    notFoundId.textContent = query || '';
+                }
+                if (notFoundCard) {
+                    const msgEl = notFoundCard.querySelector('p');
+                    if (msgEl) {
+                        if (customMsg) {
+                            msgEl.textContent = customMsg;
+                        } else {
+                            msgEl.innerHTML = `We couldn't find any student result associated with Roll / ID <strong class="font-mono text-slate-900">${query || ''}</strong>. Please verify the entered ID or contact support.`;
+                        }
+                    }
+                    notFoundCard.classList.remove('hidden');
+                    notFoundCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+
+        });
+
+        // Secret Keyboard Shortcut for Admin Access: Ctrl + Shift + A or Cmd + Shift + A
+        window.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+                e.preventDefault();
+                window.location.href = 'admin.html';
+            }
+        });
+    </script>
+</body>
+</html>

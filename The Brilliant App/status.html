@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পেমেন্ট ও আবেদন যাচাই (Payment & Application Status) | The Brilliant Association</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts: Hind Siliguri (Bengali) & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-english {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        @media print {
+            nav, footer, .no-print, .search-card-container, #quick-chips-box {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                padding: 0 !important;
+            }
+            .print-area {
+                border: 2px solid #0f172a !important;
+                box-shadow: none !important;
+                padding: 24px !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                display: block !important;
+            }
+            .print-badge {
+                border: 1px solid #333 !important;
+            }
+        }
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.03); }
+        }
+        .animate-subtle {
+            animation: pulse-subtle 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- ========================================== -->
+    <!-- TOP NOTIFICATION BANNER                    -->
+    <!-- ========================================== -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-indigo-900 text-white text-xs py-2 px-4 text-center font-medium shadow-inner flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>বৃত্তি পরীক্ষা ২০২৬: আবেদন ফি জমা দেওয়ার পর ২৪-৪৮ ঘণ্টার মধ্যে ভেরিফিকেশন সম্পন্ন হয়। হেল্পলাইন: <strong>০১৩৩০-২৮৭৯৪২</strong></span>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION BAR                             -->
+    <!-- ========================================== -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo & Name -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block text-lg font-bold text-slate-900 leading-tight">The Brilliant Association</span>
+                        <span class="block text-xs font-semibold text-brand-600 tracking-wider uppercase font-english">Bogura, Bangladesh</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-7">
+                    <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">মূলপাতা (Home)</a>
+                    <a href="index.html#notice" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">নোটিশ (Notice)</a>
+                    <a href="registration.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">রেজিস্ট্রেশন (Apply)</a>
+                    <a href="result.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">ফলাফল (Result)</a>
+                    <a href="status.html" class="text-sm font-bold text-brand-600 border-b-2 border-brand-600 pb-1">পেমেন্ট যাচাই (Status)</a>
+                </div>
+
+                <!-- Desktop Quick Action -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="registration.html" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl transition-all shadow-sm shadow-brand-500/20 hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-pen mr-1.5"></i> নতুন আবেদন
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">মূলপাতা (Home)</a>
+            <a href="index.html#notice" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">নোটিশ (Notice)</a>
+            <a href="registration.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">রেজিস্ট্রেশন (Registration)</a>
+            <a href="result.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">ফলাফল পোর্টাল (Result)</a>
+            <a href="status.html" class="block px-3 py-2 rounded-lg text-base font-bold text-brand-600 bg-brand-50">পেমেন্ট ও আবেদন যাচাই (Payment Status)</a>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- MAIN CONTENT AREA                          -->
+    <!-- ========================================== -->
+    <main class="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full flex-grow space-y-8">
+        
+        <!-- Header Title Banner -->
+        <div class="text-center space-y-3">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider font-english">
+                <i class="fa-solid fa-receipt"></i> Payment & Verification Tracker 2026
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                পেমেন্ট ও আবেদন যাচাই
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+                আপনার রেজিস্ট্রেশন আইডি (Student ID), মোবাইল নম্বর অথবা TrxID দিয়ে পেমেন্টের বর্তমান অবস্থা জানুন।
+            </p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SEARCH BOX SECTION                         -->
+        <!-- ========================================== -->
+        <div class="search-card-container bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl max-w-2xl mx-auto transition-all">
+            <form id="statusSearchForm" class="space-y-4" novalidate>
+                <div class="flex items-center justify-between">
+                    <label for="statusSearchInput" class="block text-sm font-bold text-slate-700">
+                        🔍 পেমেন্ট ও আবেদন যাচাই (Check Payment Status) <span class="text-rose-500">*</span>
+                    </label>
+                    <span class="text-xs text-slate-400 font-medium">আইডি / মোবাইল / TrxID</span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="relative flex-grow">
+                        <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass text-base"></i>
+                        </span>
+                        <input type="text" id="statusSearchInput" name="statusSearchInput" required
+                            placeholder="উদা: TBA-2026-8882 অথবা 017XXXXXXXX অথবা TrxID"
+                            class="w-full pl-11 pr-10 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-base focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all font-medium">
+                        <button type="button" id="clearSearchBtn" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600" title="মুছে ফেলুন">
+                            <i class="fa-solid fa-circle-xmark text-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <button type="submit" id="btnCheckStatus" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-extrabold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 rounded-xl shadow-md shadow-brand-600/30 hover:shadow-brand-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-search mr-2 text-sm" id="btnIcon"></i>
+                        <span id="btnText">যাচাই করুন (Search)</span>
+                    </button>
+                </div>
+
+                <!-- Input Validation Error Note -->
+                <p id="searchErrorMessage" class="hidden text-xs font-semibold text-rose-600 flex items-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>অনুগ্রহ করে একটি আইডি, মোবাইল নম্বর অথবা TrxID লিখুন।</span>
+                </p>
+                
+                <!-- Quick Test Helper Chips -->
+                <div id="quick-chips-box" class="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                    <span class="font-bold text-slate-700 flex items-center gap-1">
+                        <i class="fa-solid fa-vial"></i> ডেমো টেস্ট নম্বর:
+                    </span>
+                    <button type="button" class="quick-chip px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-brand-50 hover:text-brand-700 font-mono font-medium border border-slate-200 hover:border-brand-300 transition-colors" data-query="TBA-2026-1001">
+                        TBA-2026-1001 (Pending)
+                    </button>
+                    <button type="button" class="quick-chip px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-brand-50 hover:text-brand-700 font-mono font-medium border border-slate-200 hover:border-brand-300 transition-colors" data-query="01711223344">
+                        01711223344 (Approved)
+                    </button>
+                    <button type="button" class="quick-chip px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-brand-50 hover:text-brand-700 font-mono font-medium border border-slate-200 hover:border-brand-300 transition-colors" data-query="9J73K4L2">
+                        9J73K4L2 (TrxID)
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- LOADING SPINNER INDICATOR                  -->
+        <!-- ========================================== -->
+        <div id="statusLoadingSpinner" class="hidden py-12 text-center space-y-3">
+            <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-slate-200 border-t-brand-600"></div>
+            <p class="text-sm font-semibold text-slate-600">তথ্য অনুসন্ধান করা হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- NOT FOUND ALERT CONTAINER                  -->
+        <!-- ========================================== -->
+        <div id="statusNotFoundCard" class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-rose-200 shadow-lg max-w-2xl mx-auto text-center space-y-4 animate-in fade-in zoom-in duration-200">
+            <div class="w-16 h-16 rounded-full bg-rose-50 text-rose-500 flex items-center justify-center text-3xl mx-auto border border-rose-100">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-slate-900">কোনো তথ্য পাওয়া যায়নি</h3>
+                <p class="text-sm text-slate-600 mt-1 max-w-md mx-auto">
+                    "<strong><span id="searchedQueryEcho" class="font-mono text-rose-600"></span></strong>" দিয়ে কোনো শিক্ষার্থীর পেমেন্ট বা রেজিস্ট্রেশন রেকর্ড খুঁজে পাওয়া যায়নি।
+                </p>
+                <p class="text-xs text-slate-500 mt-2">
+                    কোনো তথ্য পাওয়া যায়নি। অনুগ্রহ করে সঠিক আইডি বা নম্বর দিয়ে পুনরায় চেষ্টা করুন।
+                </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-left text-xs text-amber-900 space-y-1">
+                <p class="font-bold flex items-center gap-1.5 text-amber-950">
+                    <i class="fa-solid fa-lightbulb text-amber-600"></i> করণীয় ও টিপস:
+                </p>
+                <ul class="list-disc list-inside space-y-1 pl-1 text-slate-700">
+                    <li>আইডি লেখার সময় বানান ও ফরম্যাট (যেমন: <span class="font-mono font-semibold">TBA-2026-XXXX</span>) সঠিকভাবে লিখেছেন কিনা যাচাই করুন।</li>
+                    <li>যে মোবাইল নম্বর দিয়ে রেজিস্ট্রেশন করা হয়েছিল, সেই ১১ ডিজিটের নম্বর দিয়ে চেষ্টা করুন।</li>
+                    <li>বিকাশ/নগদের TrxID প্রদান করে থাকলে ইংরেজি বড়/ছোট অক্ষরের কোনো পরিবর্তন না করে দিন।</li>
+                    <li>সমস্যা সমাধানে আমাদের হটলাইনে কল করুন: <a href="tel:01330287942" class="font-bold text-brand-700 underline">০১৩৩০-২৮৭৯৪২</a>।</li>
+                </ul>
+            </div>
+            <div class="flex justify-center gap-3 pt-2">
+                <button type="button" onclick="document.getElementById('statusSearchInput').focus();" class="px-5 py-2.5 text-xs font-bold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                    পুনরায় লিখুন
+                </button>
+                <a href="registration.html" class="px-5 py-2.5 text-xs font-bold rounded-xl bg-brand-50 text-brand-700 border border-brand-200 hover:bg-brand-100 transition-colors">
+                    নতুন আবেদন করুন
+                </a>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- DYNAMIC RESULT CONTAINER                   -->
+        <!-- ========================================== -->
+        <div id="paymentStatusResult" class="hidden max-w-2xl mx-auto space-y-6">
+            
+            <!-- Result Output Box (Injected dynamically) -->
+            <div id="statusCardInner" class="print-area bg-white rounded-3xl border shadow-xl overflow-hidden transition-all">
+                <!-- Dynamic Card Header & Body inserted by JS -->
+            </div>
+
+            <!-- Print / Help Action Footer -->
+            <div class="no-print flex flex-col sm:flex-row items-center justify-between gap-3 px-2">
+                <button type="button" onclick="window.print()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border border-slate-300 transition-all">
+                    <i class="fa-solid fa-print text-sm"></i>
+                    <span>স্লিপ প্রিন্ট করুন (Print Slip)</span>
+                </button>
+                <div class="text-xs text-slate-500 text-center sm:text-right">
+                    <span>প্রয়োজনে যোগাযোগ: </span>
+                    <a href="tel:01330287942" class="font-bold text-brand-600 hover:underline">০১৩৩০-২৮৭৯৪২</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- HELPFUL FAQ / INSTRUCTIONS SECTION         -->
+        <!-- ========================================== -->
+        <div class="no-print bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm max-w-2xl mx-auto space-y-4">
+            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info text-brand-600"></i>
+                <span>পেমেন্ট সংক্রান্ত সাধারণ তথ্যাবলী</span>
+            </h3>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="font-bold text-slate-800">১. পেমেন্ট করার পর ভেরিফাই হতে কত সময় লাগে?</p>
+                    <p class="mt-1 text-slate-600 text-xs">বিকাশ/নগদ/রকেটে ফি প্রেরণের পর সাধারণত ২৪ থেকে ৪৮ কর্মঘণ্টার মধ্যে আমাদের এডমিন প্যানেল থেকে TrxID যাচাই করে আবেদনটি নিশ্চিত (Approved) করা হয়।</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="font-bold text-slate-800">২. প্রবেশপত্র (Admit Card) কখন ও কীভাবে পাব?</p>
+                    <p class="mt-1 text-slate-600 text-xs">আবেদন নিশ্চিত হলে আপনার রোল নম্বর বরাদ্দ হবে। পরীক্ষার অন্তত ৭ দিন পূর্বে রোল নম্বর সম্বলিত মূল প্রবেশপত্র আপনার নিজ প্রতিষ্ঠানে সরাসরি পাঠানো হবে অথবা এই পোর্টালে অনলাইন কপি পাওয়া যাবে।</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="font-bold text-slate-800">৩. "পেমেন্ট বাতিল" বা TrxID ভুল দেখালে কী করব?</p>
+                    <p class="mt-1 text-slate-600 text-xs">যদি ভুল TrxID বা প্রেরক নম্বর দিয়ে থাকেন, তবে দ্রুত আমাদের হেল্পলাইন নম্বরে যোগাযোগ করে সঠিক ট্রানজেকশন স্ক্রিনশট পাঠিয়ে সমাধান করে নিন।</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- FOOTER SECTION                             -->
+    <!-- ========================================== -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs space-y-3">
+            <div class="flex flex-wrap justify-center items-center gap-4 text-slate-400 font-medium">
+                <a href="index.html" class="hover:text-white transition-colors">মূলপাতা</a>
+                <span>•</span>
+                <a href="registration.html" class="hover:text-white transition-colors">অনলাইন রেজিস্ট্রেশন</a>
+                <span>•</span>
+                <a href="result.html" class="hover:text-white transition-colors">ফলাফল পোর্টাল</a>
+                <span>•</span>
+                <a href="status.html" class="hover:text-white text-white font-bold transition-colors">পেমেন্ট যাচাই</a>
+            </div>
+            <p>&copy; ২০২৬ দ্য ব্রিলিয়ান্ট অ্যাসোসিয়েশন, বগুড়া (The Brilliant Association). সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="text-slate-500">কেন্দ্রীয় কার্যালয়: সবুজবাগ, বগুড়া। হেল্পলাইন: ০১৩৩০-২৮৭৯৪২ | ইমেইল: info@brilliantbogura.org</p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT LOGIC & STATUS ENGINE           -->
+    <!-- ========================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Apps Script Endpoint URL
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyvgJH9U_1b2ErwgPIFmmqbRlkDjBvHcbh9ie5-IPpCOolWZkwJOe24krlnAtKwHiIKMQ/exec";
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+                    if (menuIcon) {
+                        menuIcon.className = isHidden ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+                    }
+                });
+            }
+
+            // Seed sample demo students in localStorage if empty or missing demo set
+            seedDemoStudentsIfNecessary();
+
+            // DOM Elements
+            const searchForm = document.getElementById('statusSearchForm');
+            const searchInput = document.getElementById('statusSearchInput');
+            const clearSearchBtn = document.getElementById('clearSearchBtn');
+            const btnCheckStatus = document.getElementById('btnCheckStatus');
+            const btnIcon = document.getElementById('btnIcon');
+            const btnText = document.getElementById('btnText');
+            const searchErrorMsg = document.getElementById('searchErrorMessage');
+            const loadingSpinner = document.getElementById('statusLoadingSpinner');
+            const notFoundCard = document.getElementById('statusNotFoundCard');
+            const searchedQueryEcho = document.getElementById('searchedQueryEcho');
+            const resultContainer = document.getElementById('paymentStatusResult');
+            const statusCardInner = document.getElementById('statusCardInner');
+            const quickChips = document.querySelectorAll('.quick-chip');
+
+            // Toggle clear button on input
+            searchInput.addEventListener('input', () => {
+                if (searchInput.value.trim().length > 0) {
+                    clearSearchBtn.classList.remove('hidden');
+                } else {
+                    clearSearchBtn.classList.add('hidden');
+                }
+                searchErrorMsg.classList.add('hidden');
+            });
+
+            clearSearchBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                clearSearchBtn.classList.add('hidden');
+                searchErrorMsg.classList.add('hidden');
+                searchInput.focus();
+            });
+
+            // Quick chip click handlers
+            quickChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const q = chip.getAttribute('data-query') || chip.textContent.trim();
+                    searchInput.value = q;
+                    clearSearchBtn.classList.remove('hidden');
+                    searchErrorMsg.classList.add('hidden');
+                    performStatusCheck(q);
+                });
+            });
+
+            // Form Submit Handler
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const query = searchInput.value.trim();
+                if (!query) {
+                    searchErrorMsg.classList.remove('hidden');
+                    searchInput.focus();
+                    return;
+                }
+                searchErrorMsg.classList.add('hidden');
+                performStatusCheck(query);
+            });
+
+            // Auto-check URL query parameters if present (e.g. ?id=TBA-2026-1001 or ?q=017...)
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialQuery = urlParams.get('id') || urlParams.get('query') || urlParams.get('trx') || urlParams.get('phone');
+            if (initialQuery) {
+                searchInput.value = initialQuery.trim();
+                clearSearchBtn.classList.remove('hidden');
+                performStatusCheck(initialQuery.trim());
+            }
+
+            // Normalization helper: convert Bengali numerals to English and sanitize
+            function normalizeQuery(str) {
+                if (!str) return '';
+                const bnToEn = { '০':'0', '১':'1', '২':'2', '৩':'3', '৪':'4', '৫':'5', '৬':'6', '৭':'7', '৮':'8', '৯':'9' };
+                let converted = String(str).replace(/[০-৯]/g, d => bnToEn[d] || d);
+                return converted.trim().toLowerCase();
+            }
+
+            function stripPunctuation(str) {
+                return normalizeQuery(str).replace(/[\s\-_]/g, '');
+            }
+
+            // Core Search Execution Engine
+            async function performStatusCheck(rawQuery) {
+                const normQ = normalizeQuery(rawQuery);
+                const strippedQ = stripPunctuation(rawQuery);
+
+                if (!strippedQ) {
+                    searchErrorMsg.classList.remove('hidden');
+                    return;
+                }
+
+                // Hide previous states and show loader
+                resultContainer.classList.add('hidden');
+                notFoundCard.classList.add('hidden');
+                loadingSpinner.classList.remove('hidden');
+                btnCheckStatus.disabled = true;
+                btnIcon.className = 'fa-solid fa-circle-notch fa-spin mr-2 text-sm';
+                btnText.textContent = 'যাচাই হচ্ছে...';
+
+                // 1. First, search local storage dataset (fastest)
+                let matchedStudent = findStudentInLocalStorage(rawQuery, normQ, strippedQ);
+
+                // 2. If not found in localStorage and remote backend is available, query Apps Script API
+                if (!matchedStudent && WEB_APP_URL && !WEB_APP_URL.includes("YOUR_WEB_APP_URL_HERE")) {
+                    try {
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 second timeout
+
+                        const apiUrl = `${WEB_APP_URL}?action=checkPaymentStatus&query=${encodeURIComponent(rawQuery)}`;
+                        const res = await fetch(apiUrl, { signal: controller.signal });
+                        clearTimeout(timeoutId);
+
+                        if (res.ok) {
+                            const data = await res.json();
+                            if (data && (data.success || data.status === 'success') && data.student) {
+                                matchedStudent = data.student;
+                            }
+                        }
+                    } catch (netErr) {
+                        console.warn("Backend API status query note:", netErr);
+                    }
+                }
+
+                // 3. Fallback: Check if there's any pending student cached in AppCache or memory
+                if (!matchedStudent) {
+                    matchedStudent = findStudentInFallbacks(rawQuery, normQ, strippedQ);
+                }
+
+                // Small delay for smooth UI transition
+                setTimeout(() => {
+                    loadingSpinner.classList.add('hidden');
+                    btnCheckStatus.disabled = false;
+                    btnIcon.className = 'fa-solid fa-search mr-2 text-sm';
+                    btnText.textContent = 'যাচাই করুন (Search)';
+
+                    if (matchedStudent) {
+                        renderStatusCard(matchedStudent, rawQuery);
+                    } else {
+                        searchedQueryEcho.textContent = rawQuery;
+                        notFoundCard.classList.remove('hidden');
+                        notFoundCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }, 400);
+            }
+
+            // LocalStorage Search Implementation
+            function findStudentInLocalStorage(rawQuery, normQ, strippedQ) {
+                try {
+                    const rawList = localStorage.getItem('tba_students');
+                    if (!rawList) return null;
+                    const students = JSON.parse(rawList);
+                    if (!Array.isArray(students)) return null;
+
+                    return students.find(s => matchStudent(s, rawQuery, normQ, strippedQ)) || null;
+                } catch (e) {
+                    console.error("Error reading localStorage tba_students:", e);
+                    return null;
+                }
+            }
+
+            // Secondary fallback search (custom cert student, session student)
+            function findStudentInFallbacks(rawQuery, normQ, strippedQ) {
+                try {
+                    const certStudent = JSON.parse(localStorage.getItem('cert_custom_student') || 'null');
+                    if (certStudent && matchStudent(certStudent, rawQuery, normQ, strippedQ)) {
+                        return certStudent;
+                    }
+                } catch(e) {}
+                return null;
+            }
+
+            // Match student record across ID, Phone, and TrxID
+            function matchStudent(s, rawQuery, normQ, strippedQ) {
+                if (!s) return false;
+
+                // ID variations
+                const sId = String(s.id || s.uniqueId || s.regId || s.studentId || '').trim();
+                const normId = stripPunctuation(sId);
+                if (normId && (normId === strippedQ || normId.includes(strippedQ) || strippedQ.includes(normId))) return true;
+
+                // Mobile variations
+                const sMobile = String(s.mobileNumber || s.mobile || s.phone || s.senderNumber || s.contactNumber || '').trim();
+                const normMobile = stripPunctuation(sMobile);
+                if (normMobile && (normMobile === strippedQ || normMobile.endsWith(strippedQ) || strippedQ.endsWith(normMobile))) return true;
+
+                // TrxID variations
+                const sTrx = String(s.trxId || s.transactionId || s.trx_id || s.txId || '').trim();
+                const normTrx = stripPunctuation(sTrx);
+                if (normTrx && (normTrx === strippedQ || normTrx.toLowerCase() === normQ)) return true;
+
+                // Roll Number match (for already verified students)
+                const sRoll = String(s.roll || s.rollNo || s.rollNumber || '').trim();
+                if (sRoll && stripPunctuation(sRoll) === strippedQ) return true;
+
+                return false;
+            }
+
+            // Render Dynamic Status Card (Case A, Case B, Case C)
+            function renderStatusCard(student, searchedTerm) {
+                const name = student.studentName || student.englishName || student.name || student.bengaliName || "শিক্ষার্থী";
+                const bengaliName = student.bengaliName || student.banName || "";
+                const sClass = student.studentClass || student.class || "শ্রেণি অনির্ধারিত";
+                const center = student.examCenter || student.center || student.centerName || "Adamdighi (আদমদীঘি)";
+                const uniqueId = student.uniqueId || student.id || student.regId || "TBA-2026-XXXX";
+                const mobile = student.mobileNumber || student.mobile || student.phone || student.senderNumber || "N/A";
+                const trxId = student.trxId || student.transactionId || student.trx_id || "N/A";
+                const method = student.paymentMethod || student.payment_method || "bKash / Nagad";
+                const rollNo = student.roll || student.rollNo || student.rollNumber || "";
+                const date = student.registeredAt || student.date || student.registrationDate || new Date().toLocaleDateString('bn-BD');
+
+                // Determine Status Category: Pending / Approved (Verified) / Rejected
+                const rawStatus = String(student.status || student.paymentStatus || '').toLowerCase();
+                let statusType = 'pending'; // default
+
+                if (rawStatus.includes('reject') || rawStatus.includes('cancel') || rawStatus.includes('বাতিল') || rawStatus.includes('invalid')) {
+                    statusType = 'rejected';
+                } else if (rawStatus.includes('verif') || rawStatus.includes('approv') || rawStatus.includes('paid') || rawStatus.includes('নিশ্চিত') || (rollNo && rollNo !== 'Pending' && !isNaN(rollNo))) {
+                    statusType = 'approved';
+                } else {
+                    statusType = 'pending';
+                }
+
+                let headerHtml = '';
+                let badgeHtml = '';
+                let detailsHtml = '';
+                let alertNoticeHtml = '';
+
+                // ====================================================
+                // CASE A: Status is "Pending" (যাচাই প্রক্রিয়াধীন)
+                // ====================================================
+                if (statusType === 'pending') {
+                    headerHtml = `
+                        <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 px-6 py-5 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl text-amber-100 shadow-inner">
+                                    <i class="fa-solid fa-hourglass-half animate-spin" style="animation-duration: 4s;"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-extrabold tracking-tight">পেমেন্ট ও আবেদন ট্র্যাকার</h3>
+                                    <p class="text-xs text-amber-100">স্ট্যাটাস: যাচাই প্রক্রিয়াধীন রয়েছে</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold font-english border border-white/30">
+                                ID: ${uniqueId}
+                            </span>
+                        </div>
+                    `;
+
+                    badgeHtml = `
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-amber-50 border border-amber-300 text-amber-900 font-extrabold text-sm shadow-xs animate-subtle">
+                            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block shadow-sm"></span>
+                            <span>🟡 Payment Verification Pending (যাচাই প্রক্রিয়াধীন)</span>
+                        </div>
+                    `;
+
+                    detailsHtml = `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">শিক্ষার্থীর নাম (Student Name)</span>
+                                <span class="text-slate-900 font-bold text-sm block mt-0.5">${name} ${bengaliName ? `(${bengaliName})` : ''}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">শ্রেণি (Class)</span>
+                                <span class="text-brand-700 font-bold text-sm block mt-0.5">${sClass}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">পরীক্ষার কেন্দ্র (Exam Center)</span>
+                                <span class="text-slate-800 font-bold block mt-0.5">${center}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">মোবাইল নম্বর (Contact Number)</span>
+                                <span class="text-slate-800 font-bold font-english block mt-0.5">${mobile}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">পেমেন্ট মেথড (Payment Method)</span>
+                                <span class="text-slate-800 font-bold block mt-0.5">${method}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">ট্রানজেকশন আইডি (TrxID)</span>
+                                <span class="text-brand-600 font-mono font-bold block mt-0.5">${trxId}</span>
+                            </div>
+                        </div>
+                    `;
+
+                    alertNoticeHtml = `
+                        <div class="p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm space-y-2">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-exclamation text-amber-600 text-base mt-0.5 flex-shrink-0"></i>
+                                <div class="space-y-1">
+                                    <p class="font-extrabold text-amber-950">যাচাই প্রক্রিয়াধীন সংক্রান্ত তথ্য:</p>
+                                    <p class="text-slate-700 leading-relaxed">
+                                        আপনার পেমেন্টটি পর্যালোচনা করা হচ্ছে। অ্যাডমিন যাচাই সম্পন্ন করলে পেমেন্ট ভেরিফিকেশন এখানে দৃশ্যমান হবে।
+                                    </p>
+                                    <p class="text-xs text-amber-800 pt-1">
+                                        💡 সাধারণ নিয়মে ফি জমা দেওয়ার ২৪ থেকে ৪৮ কর্মঘণ্টার মধ্যে অ্যাডমিন যাচাই করে পেমেন্ট ভেরিফিকেশন সম্পন্ন করেন।
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // ====================================================
+                // CASE B: Status is "Approved" or "Verified"
+                // ====================================================
+                else if (statusType === 'approved') {
+                    const finalRoll = rollNo && rollNo !== 'Pending' ? rollNo : 'বরাদ্দ সম্পন্ন (শীঘ্রই রোল প্রদর্শিত হবে)';
+
+                    headerHtml = `
+                        <div class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 px-6 py-5 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl text-emerald-100 shadow-inner">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-extrabold tracking-tight">পেমেন্ট ভেরিফিকেশন সফল!</h3>
+                                    <p class="text-xs text-emerald-100">আবেদন ও ফি সফলভাবে নিশ্চিত করা হয়েছে</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold font-english border border-white/30">
+                                ID: ${uniqueId}
+                            </span>
+                        </div>
+                    `;
+
+                    badgeHtml = `
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 font-extrabold text-sm shadow-xs">
+                            <span class="w-3 h-3 rounded-full bg-emerald-600 inline-block"></span>
+                            <span>🟢 Payment Verified & Approved (পেমেন্ট নিশ্চিত হয়েছে)</span>
+                        </div>
+                    `;
+
+                    detailsHtml = `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                            <div class="p-3.5 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+                                <span class="text-emerald-800 block text-[11px] font-semibold">বরাদ্দকৃত রোল নম্বর (Allocated Roll)</span>
+                                <span class="text-emerald-900 font-extrabold text-base sm:text-lg font-mono block mt-0.5">${finalRoll}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">শিক্ষার্থীর নাম (Student Name)</span>
+                                <span class="text-slate-900 font-bold text-sm block mt-0.5">${name}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">শ্রেণি (Class)</span>
+                                <span class="text-brand-700 font-bold text-sm block mt-0.5">${sClass}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">পরীক্ষার কেন্দ্র (Exam Center)</span>
+                                <span class="text-slate-800 font-bold block mt-0.5">${center}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">পরীক্ষার সম্ভাব্য তারিখ</span>
+                                <span class="text-slate-800 font-bold block mt-0.5">অফিসিয়াল নোটিশে প্রকাশিত হবে</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">ট্রানজেকশন আইডি (TrxID)</span>
+                                <span class="text-emerald-700 font-mono font-bold block mt-0.5">${trxId}</span>
+                            </div>
+                        </div>
+                    `;
+
+                    alertNoticeHtml = `
+                        <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 text-xs sm:text-sm space-y-2">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-envelope-circle-check text-emerald-600 text-lg mt-0.5 flex-shrink-0"></i>
+                                <div class="space-y-1">
+                                    <p class="font-extrabold text-emerald-900">প্রবেশপত্র (Admit Card) সংক্রান্ত নির্দেশনা:</p>
+                                    <p class="text-slate-800 font-semibold leading-relaxed">
+                                        প্রবেশপত্র আপনার প্রতিষ্ঠানে পাঠানো হবে।
+                                    </p>
+                                    <p class="text-xs text-slate-600 pt-0.5">
+                                        আপনার বিদ্যালয়ের মাধ্যমে মূল রঙিন প্রবেশপত্রটি পৌঁছে দেওয়া হবে। এছাড়া পরীক্ষার আগে নোটিশ জারির মাধ্যমে ওয়েবসাইট থেকেও অনলাইন প্রবেশপত্র প্রিন্ট করার সুবিধা উন্মুক্ত করা হতে পারে।
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // ====================================================
+                // CASE C: Status is "Rejected" or Invalid TrxID
+                // ====================================================
+                else {
+                    headerHtml = `
+                        <div class="bg-gradient-to-r from-rose-700 via-rose-600 to-red-700 px-6 py-5 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl text-rose-100 shadow-inner">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-extrabold tracking-tight">পেমেন্ট যাচাই ব্যর্থ</h3>
+                                    <p class="text-xs text-rose-100">প্রদত্ত তথ্যের অমিল পাওয়া গেছে</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold font-english border border-white/30">
+                                ID: ${uniqueId}
+                            </span>
+                        </div>
+                    `;
+
+                    badgeHtml = `
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-rose-50 border border-rose-300 text-rose-900 font-extrabold text-sm shadow-xs">
+                            <span class="w-3 h-3 rounded-full bg-rose-600 inline-block"></span>
+                            <span>🔴 Verification Failed / Invalid TrxID (পেমেন্ট বাতিল)</span>
+                        </div>
+                    `;
+
+                    detailsHtml = `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">শিক্ষার্থীর নাম</span>
+                                <span class="text-slate-900 font-bold text-sm block mt-0.5">${name}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">শ্রেণি (Class)</span>
+                                <span class="text-slate-800 font-bold block mt-0.5">${sClass}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">প্রদত্ত TrxID</span>
+                                <span class="text-rose-600 font-mono font-bold block mt-0.5">${trxId}</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                                <span class="text-slate-500 block text-[11px] font-semibold">যোগাযোগ নম্বর</span>
+                                <span class="text-slate-800 font-bold font-english block mt-0.5">${mobile}</span>
+                            </div>
+                        </div>
+                    `;
+
+                    alertNoticeHtml = `
+                        <div class="p-4 sm:p-5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-950 text-xs sm:text-sm space-y-3">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-xmark text-rose-600 text-lg mt-0.5 flex-shrink-0"></i>
+                                <div class="space-y-1">
+                                    <p class="font-extrabold text-rose-900">পেমেন্ট বাতিল হওয়ার কারণ ও করণীয়:</p>
+                                    <p class="text-slate-800 font-semibold leading-relaxed">
+                                        আপনার প্রদত্ত TrxID মেলেনি। অনুগ্রহ করে হেল্পলাইনে যোগাযোগ করুন।
+                                    </p>
+                                    <p class="text-xs text-rose-800">
+                                        সম্ভবত ভুল বা অসম্পূর্ণ ট্রানজেকশন আইডি দেওয়া হয়েছে অথবা ফি জমা হয়নি। অনুগ্রহ করে আপনার বিকাশ/নগদ স্টেটমেন্ট চেক করুন এবং আমাদের সাথে যোগাযোগ করুন।
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pt-1 flex flex-wrap gap-2">
+                                <a href="tel:01330287942" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs shadow-xs transition-colors">
+                                    <i class="fa-solid fa-phone"></i> হেল্পলাইনে কল করুন (০১৩৩০-২৮৭৯৪২)
+                                </a>
+                                <a href="registration.html" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs border border-slate-300 transition-colors">
+                                    নতুন করে তথ্য দিন
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // Assemble Final Card HTML
+                statusCardInner.innerHTML = `
+                    ${headerHtml}
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100">
+                            ${badgeHtml}
+                            <span class="text-xs text-slate-400 font-medium">রেকর্ড টাইম: ${date}</span>
+                        </div>
+                        ${detailsHtml}
+                        ${alertNoticeHtml}
+                    </div>
+                `;
+
+                // Unhide container and scroll smoothly
+                resultContainer.classList.remove('hidden');
+                resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Seed sample demo students in localStorage for instant testing
+            function seedDemoStudentsIfNecessary() {
+                try {
+                    let existing = JSON.parse(localStorage.getItem('tba_students') || '[]');
+                    if (!Array.isArray(existing) || existing.length === 0) {
+                        const sampleStudents = [
+                            {
+                                id: "TBA-2026-1001",
+                                uniqueId: "TBA-2026-1001",
+                                studentName: "Tamim Iqbal",
+                                bengaliName: "তামিম ইকবাল",
+                                studentClass: "Class 8",
+                                class: "Class 8",
+                                mobileNumber: "01711000111",
+                                mobile: "01711000111",
+                                examCenter: "Adamdighi (আদমদীঘি)",
+                                center: "Adamdighi",
+                                paymentMethod: "bKash",
+                                trxId: "8K92M1A7",
+                                status: "Pending",
+                                registeredAt: "2026-03-25"
+                            },
+                            {
+                                id: "TBA-2026-1002",
+                                uniqueId: "TBA-2026-1002",
+                                studentName: "Sadia Afrin",
+                                bengaliName: "সাদিয়া আফরিন",
+                                studentClass: "Class 5",
+                                class: "Class 5",
+                                mobileNumber: "01711223344",
+                                mobile: "01711223344",
+                                roll: "5012",
+                                rollNo: "5012",
+                                examCenter: "Dupchanchia (দুপচাঁচিয়া)",
+                                center: "Dupchanchia",
+                                paymentMethod: "Nagad",
+                                trxId: "9J73K4L2",
+                                status: "Verified",
+                                registeredAt: "2026-03-24"
+                            },
+                            {
+                                id: "TBA-2026-1003",
+                                uniqueId: "TBA-2026-1003",
+                                studentName: "Mahmud Hasan",
+                                bengaliName: "মাহমুদ হাসান",
+                                studentClass: "Class 7",
+                                class: "Class 7",
+                                mobileNumber: "01812345678",
+                                mobile: "01812345678",
+                                examCenter: "Kahalu (কাহালু)",
+                                center: "Kahalu",
+                                paymentMethod: "Rocket",
+                                trxId: "INVALID999",
+                                status: "Rejected",
+                                registeredAt: "2026-03-22"
+                            }
+                        ];
+                        localStorage.setItem('tba_students', JSON.stringify(sampleStudents));
+                    }
+                } catch(e) {}
+            }
+
+            // Secret Keyboard Shortcut for Admin Access: Ctrl + Shift + A or Cmd + Shift + A
+            window.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+                    e.preventDefault();
+                    window.location.href = 'admin.html';
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
+
